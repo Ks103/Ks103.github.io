@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { Behance, Github } from '../components/AllSvgs';
+import { Behance, Figma } from '../components/AllSvgs';
 
 
 
@@ -118,9 +118,9 @@ const Card = (props) => {
                 </Link>
                 <Git  href={github}  target="_blank">
                     {iconType === 'behance' ? (
-                        <Behance width={30} height={30} />
+                        <Figma width={30} height={30} />
                     ) : (
-                        <Github width={30} height={30} />
+                        <Figma width={30} height={30} />
                     )}
                 </Git>
             </Footer>

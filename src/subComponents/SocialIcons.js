@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 // import { NavLink } from 'react-router-dom'
 import styled from "styled-components";
-import {  Github, Instagram, Linkedin,Behance } from "../components/AllSvgs";
+import {  Figma, Instagram, Linkedin, Topmate, Youtube } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
 
 const Icons = styled.div`
@@ -39,9 +39,9 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://github.com/Ks103"}
+          href={"https://www.figma.com/@khushishroff"}
         >
-          <Github
+          <Figma
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
@@ -56,7 +56,7 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://www.instagram.com/khushi.uiux/"}
+          href={"https://www.instagram.com/unfoldwith.me/"}
         >
           <Instagram
             width={25}
@@ -65,7 +65,23 @@ const SocialIcons = (props) => {
           />
         </a>
       </motion.div>
-      
+      <motion.div
+        initial={{scale:0 }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: "spring", duration: 1, delay: 1.2 }}
+      >
+        <a
+          style={{ color: "inherit" }}
+          target="_blank"
+          href={"https://www.youtube.com/@unfoldwith"}
+        >
+          <Youtube
+            width={25}
+            height={25}
+            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+          />
+        </a>
+      </motion.div>
       <motion.div
         initial={{scale:0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
@@ -91,9 +107,9 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://www.behance.net/khushikhushi28"}
+          href={"https://topmate.io/khushi_shroff/"}
         >
-          <Behance
+          <Topmate
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}

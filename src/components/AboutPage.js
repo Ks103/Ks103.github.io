@@ -72,13 +72,19 @@ const AboutPage = () => {
             <img src={astronaut} alt="spaceman" />
         </Spaceman>    
         <Main>
-      "I can build and design your ideas"
-Always ready to discover new things.
-<br /> <br/>
-I have two years of experience in UI/UX design, with a strong background in creating designs across AI-generated platforms, blockchain, e-commerce, and various product-based applications. My expertise in Figma, combined with hands-on experience from multiple internships and freelancing projects, has allowed me to successfully deliver designs for over 10 clients.
-<br/> <br/>
-Additionally, my proficiency in frontend development further enhances my ability to create seamless and interactive user experiences, making me a strong candidate for this role. 
-        </Main>
+  "I design and build ideas into meaningful digital experiences."
+  Always curious and ready to explore what’s next.
+  <br /> <br />
+  With 3+ years of experience in UI/UX design, I’ve worked across AI-powered platforms,
+  blockchain products, e-commerce solutions, and modern product-based applications.
+  As a Figma expert, backed by internships, freelancing, and real-world product work,
+  I’ve successfully delivered impactful designs for 10+ clients and mentored 100+ aspiring designers.
+  <br /> <br />
+  I also create educational UI/UX content on YouTube and leverage my frontend development
+  skills to bridge the gap between design and development—ensuring seamless handoff
+  and highly interactive user experiences.
+</Main>
+
 
         <BigTitle text="ABOUT" top="10%" left="5%" />
 

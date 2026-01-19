@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {motion} from 'framer-motion'
-import Me from '../assets/Images/profile-img.png'
+import Me from '../assets/Images/p2.png'
 
 
 const Box = styled(motion.div)`
@@ -41,11 +41,11 @@ display: flex;
 
 .pic{
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    bottom: 1%;
+    left: 45%;
     transform: translate(-50%,0%);
-    width: 100%;
-    height: auto;
+    width: 106%;
+    height: 90%;
 }
 `
 
@@ -80,8 +80,8 @@ const Intro = () => {
             <SubBox>
                 <Text>
                     <h2>Hello...</h2>
-                    <h5>I'm UI/UX Designer | UI Specialist</h5>
-                    <h6>Transforming ideas into seamless, user-centered experiences through innovative and thoughtful design. </h6>
+                    <h5>I'm UX Designer | UI Specialist | Mentor</h5>
+                    <h6>Designing user-first products, specializing in UI systems, and mentoring the next generation of designers. </h6>
                 </Text>
             </SubBox>
             <SubBox>
