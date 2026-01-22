@@ -38,25 +38,25 @@ const Contact = styled.a`
   z-index: 1;
 `
 
-const BLOG = styled(NavLink)`
-  color: ${props => props.theme.text};
-  position: absolute;
-  top: 50%;
-  right: calc(1rem + 2vw);
-  transform: rotate(90deg) translate(-50%, -50%);
-  text-decoration: none;
-  z-index: 1;
-`
+// const BLOG = styled(NavLink)`
+//   color: ${props => props.theme.text};
+//   position: absolute;
+//   top: 50%;
+//   right: calc(1rem + 2vw);
+//   transform: rotate(90deg) translate(-50%, -50%);
+//   text-decoration: none;
+//   z-index: 1;
+// `
 
-const WORK = styled(NavLink)`
-  color: ${props => (props.click ? props.theme.body : props.theme.text)};
-  position: absolute;
-  top: 50%;
-  left: calc(1rem + 2vw);
-  transform: translate(-50%, -50%) rotate(-90deg);
-  text-decoration: none;
-  z-index: 1;
-`
+// const WORK = styled(NavLink)`
+//   color: ${props => (props.click ? props.theme.body : props.theme.text)};
+//   position: absolute;
+//   top: 50%;
+//   left: calc(1rem + 2vw);
+//   transform: translate(-50%, -50%) rotate(-90deg);
+//   text-decoration: none;
+//   z-index: 1;
+// `
 
 /* 🔥 CHANGED FROM NavLink → a */
 const DESIGN = styled.a`
