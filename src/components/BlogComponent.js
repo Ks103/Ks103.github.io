@@ -69,7 +69,7 @@ const BlogComponent = (props) => {
   const { name, tags, date, link } = props.blog;
   return (
     <Container variants={Item}>
-      <Box target="_blank" href={`${link}`}>
+      <Box target="_blank" rel="noreferrer" href={`${link}`}>
         
         <Title>{name}</Title>
         <HashTags>

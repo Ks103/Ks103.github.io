@@ -40,6 +40,7 @@ const SocialIcons = (props) => {
           style={{ color: "inherit" }}
           target="_blank"
           href={"https://www.figma.com/@khushishroff"}
+          rel="noreferrer"
         >
           <Figma
             width={25}
@@ -57,6 +58,7 @@ const SocialIcons = (props) => {
           style={{ color: "inherit" }}
           target="_blank"
           href={"https://www.instagram.com/unfoldwith.me/"}
+          rel="noreferrer"
         >
           <Instagram
             width={25}
@@ -74,6 +76,7 @@ const SocialIcons = (props) => {
           style={{ color: "inherit" }}
           target="_blank"
           href={"https://www.youtube.com/@unfoldwith"}
+          rel="noreferrer"
         >
           <Youtube
             width={25}
@@ -91,6 +94,7 @@ const SocialIcons = (props) => {
           style={{ color: "inherit" }}
           target="_blank"
           href={"https://www.linkedin.com/in/khushi-shroff-70b049211/"}
+          rel="noreferrer"
         >
           <Linkedin
             width={25}
@@ -108,6 +112,7 @@ const SocialIcons = (props) => {
           style={{ color: "inherit" }}
           target="_blank"
           href={"https://topmate.io/khushi_shroff/"}
+          rel="noreferrer"
         >
           <Topmate
             width={25}

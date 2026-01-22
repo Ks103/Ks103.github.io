@@ -111,10 +111,10 @@ const Card = (props) => {
                 }
             </Tags>
             <Footer>
-                <Link href={demo} target="_blank">
+                <Link href={demo} target="_blank" rel="noreferrer">
                     Visit
                 </Link>
-                <Git  href={github}  target="_blank">
+                <Git  href={github}  target="_blank" rel="noreferrer">
                     {iconType === 'behance' ? (
                         <Figma width={30} height={30} />
                     ) : (

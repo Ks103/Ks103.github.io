@@ -161,7 +161,7 @@ const Main = () => {
           <span>click me</span>
         </Center>
 
-        <Contact href="mailto:kkhushi3058@gmail.com" target="_blank">
+        <Contact href="mailto:kkhushi3058@gmail.com" target="_blank" rel="noreferrer">
           <motion.h2
             initial={{ y: -200 }}
             animate={{ y: -2.5 }}
