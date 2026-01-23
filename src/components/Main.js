@@ -174,7 +174,7 @@ const Main = () => {
         </Contact>
 
         {/* 🔥 EXTERNAL LINK */}
-        <DESIGN
+        {/* <DESIGN
           href="https://www.figma.com/@khushishroff"
           target="_blank"
           rel="noopener noreferrer"
@@ -189,7 +189,7 @@ const Main = () => {
           >
             Design Work
           </motion.h2>
-        </DESIGN>
+        </DESIGN> */}
 
         <BottomBar>
           <ABOUT to="/about" click={+click}>
