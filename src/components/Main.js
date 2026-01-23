@@ -59,15 +59,15 @@ const Contact = styled.a`
 // `
 
 /* 🔥 CHANGED FROM NavLink → a */
-const DESIGN = styled.a`
-  color: ${props => (props.click ? props.theme.body : props.theme.text)};
-  position: absolute;
-  top: 30%;
-  left: calc(1rem + 2vw);
-  transform: translate(-50%, -50%) rotate(-90deg);
-  text-decoration: none;
-  z-index: 1;
-`
+// const DESIGN = styled.a`
+//   color: ${props => (props.click ? props.theme.body : props.theme.text)};
+//   position: absolute;
+//   top: 30%;
+//   left: calc(1rem + 2vw);
+//   transform: translate(-50%, -50%) rotate(-90deg);
+//   text-decoration: none;
+//   z-index: 1;
+// `
 
 const BottomBar = styled.div`
   position: absolute;
