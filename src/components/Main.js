@@ -124,6 +124,11 @@ const Center = styled.button`
     display: ${props => (props.click ? 'none' : 'inline-block')};
     padding-top: 1rem;
   }
+  @media (max-width: 480px) {
+      height: ${props => (props.click ? '80px' : '250px')};
+      width: ${props => (props.click ? '80px' : '250px')};
+      left: ${props => (props.click ? '85%' : '50%')}
+  }
 `
 
 const DarkDiv = styled.div`

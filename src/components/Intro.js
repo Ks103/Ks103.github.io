@@ -32,7 +32,11 @@ background-size: 100% 2px;
 
 
     z-index:1;
-
+    @media (max-width: 480px) {
+        width: 85vw;
+        height: 35vh !important;
+        top: 35%;
+    }
 `
 const SubBox = styled.div`
 width: 50%;
@@ -46,6 +50,10 @@ display: flex;
     transform: translate(-50%,0%);
     width: 106%;
     height: 90%;
+    @media (max-width: 480px) {
+        width: 16rem;
+        height: 16rem;
+    }
 }
 `
 
