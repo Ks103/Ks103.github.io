@@ -34,7 +34,7 @@ background-size: 100% 2px;
     z-index:1;
     @media (max-width: 480px) {
         width: 77vw;
-        height: calc(var(--vh) * 42) !important;
+        height: calc(var(--vh) * 45) !important;
         top: 35%;
     }
 `
