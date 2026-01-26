@@ -33,8 +33,8 @@ background-size: 100% 2px;
 
     z-index:1;
     @media (max-width: 480px) {
-        width: 85vw;
-        height: 35vh !important;
+        width: 80vw;
+        height: 45vh !important;
         top: 35%;
     }
 `
