@@ -6,7 +6,7 @@ import { Figma } from '../components/AllSvgs';
 
 const Box = styled(motion.li)`
 width: 16rem;
-height: 40vh;
+height: calc(var(--vh) * 40);
 background-color: ${props => props.theme.text};
 color:${props => props.theme.body};
 padding: 1.5rem 2rem;

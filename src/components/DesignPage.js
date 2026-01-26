@@ -15,7 +15,7 @@ import BigTitlte from "../subComponents/BigTitlte";
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
 
-  height: 400vh;
+  height: calc(var(--vh) * 400);
   position: relative;
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@ const Main = styled(motion.ul)`
   position: fixed;
   top: 12rem;
   left: calc(10rem + 15vw);
-  height: 40vh;
+  height: calc(var(--vh) * 40);
   display: flex;
 
   color: white;

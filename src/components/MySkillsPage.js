@@ -12,7 +12,7 @@ import BigTitle from '../subComponents/BigTitlte'
 const Box = styled.div`
   background-color: ${props => props.theme.body};
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh) * 100);
   position: relative;
 `
 
@@ -24,7 +24,7 @@ const Main = styled.div`
 
   /* ✅ Increased width */
   width: 52vw;
-  min-height: 60vh;
+  min-height: calc(var(--vh) * 60);
 
   z-index: 3;
   line-height: 1;

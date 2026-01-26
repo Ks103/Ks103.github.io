@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme } from "./components/Themes";
 import { AnimatePresence } from "framer-motion";
 import GlobalStyle from "./globalStyles";
+import { useEffect } from 'react';
 
 //Components
 import Main from "./components/Main";
@@ -14,6 +15,20 @@ import MySkillsPage from "./components/MySkillsPage";
 import SoundBar from "./subComponents/SoundBar";
 
 function App() {
+  useEffect(() => {
+    const setVH = () => {
+      document.documentElement.style.setProperty(
+        '--vh',
+        `${window.innerHeight * 0.01}px`
+      );
+    };
+
+    setVH()
+    window.addEventListener('resize', setVH);
+
+    return () => window.removeEventListener('resize', setVH);
+  }, []);
+  
   const location = useLocation();
   return (
     <>

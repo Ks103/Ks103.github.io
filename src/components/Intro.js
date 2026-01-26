@@ -13,7 +13,7 @@ transform: translate(-50%, -50%);
 
 
 width: 65vw;
-height:55vh;
+height: calc(var(--vh) * 65);
 display: flex;
 
 
@@ -33,8 +33,8 @@ background-size: 100% 2px;
 
     z-index:1;
     @media (max-width: 480px) {
-        width: 80vw;
-        height: 45vh !important;
+        width: 77vw;
+        height: calc(var(--vh) * 42) !important;
         top: 35%;
     }
 `
