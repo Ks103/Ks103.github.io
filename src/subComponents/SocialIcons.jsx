@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 // import { NavLink } from 'react-router-dom'
 import styled from "styled-components";
-import {  Figma, Instagram, Linkedin, Topmate, Youtube } from "../components/AllSvgs";
+import {  Instagram, Linkedin, Topmate, Youtube } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
 
 const Icons = styled.div`

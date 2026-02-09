@@ -7,9 +7,9 @@ import { useEffect } from 'react';
 
 //Components
 import Main from "./components/Main";
-import AboutPage from "./components/AboutPage";
+import AboutPage from "./components/AboutPage.jsx";
 import BlogPage from "./components/BlogPage";
-import WorkPage from "./components/WorkPage";
+import WorkPage from "./components/WorkPage.jsx";
 import DesignPage from "./components/DesignPage";
 import MySkillsPage from "./components/MySkillsPage";
 import SoundBar from "./subComponents/SoundBar";
