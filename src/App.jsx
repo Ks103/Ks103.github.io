@@ -12,7 +12,10 @@ import BlogPage from "./components/BlogPage";
 import WorkPage from "./components/WorkPage.jsx";
 import DesignPage from "./components/DesignPage";
 import MySkillsPage from "./components/MySkillsPage";
+import MyWorkPage from "./components/MyWorkPage";
+import MyWorkDetailPage from "./components/MyWorkDetailPage";
 import SoundBar from "./subComponents/SoundBar";
+import FigmaCredit from "./components/FigmaCredit.jsx";
 
 function App() {
   useEffect(() => {
@@ -55,7 +58,13 @@ function App() {
             <Route path="/design" element={<DesignPage />} />
 
             <Route path="/skills" element={<MySkillsPage />} />
+
+            <Route path="/mywork" element={<MyWorkPage />} />
             
+            <Route path="/mywork/:id" element={<MyWorkDetailPage />} />
+
+            <Route path="/figmacredit" element={<FigmaCredit />}/>
+
             <Route path="*" element={<Main />} />
           </Routes>
         </AnimatePresence>

@@ -91,6 +91,12 @@ const SKILLS = styled(NavLink)`
   z-index: 1;
 `
 
+const MYWORK = styled(NavLink)`
+  color: ${props => props.theme.text};
+  text-decoration: none;
+  z-index: 1;
+`
+
 const rotate = keyframes`
   from {
     transform: rotate(0);
@@ -179,7 +185,7 @@ const Main = () => {
         </Contact>
 
         {/* 🔥 EXTERNAL LINK */}
-        {
+        {/* {
         <DESIGN
           href="https://www.figma.com/@khushishroff"
           target="_blank"
@@ -196,7 +202,7 @@ const Main = () => {
             Design Work
           </motion.h2>
         </DESIGN>
-        }
+        } */}
 
         <BottomBar>
           <ABOUT to="/about" click={+click}>
@@ -222,6 +228,18 @@ const Main = () => {
               MY SKILLS
             </motion.h2>
           </SKILLS>
+
+          {/* <MYWORK to="/mywork">
+            <motion.h2
+              initial={{ y: 200 }}
+              animate={{ y: 0 }}
+              transition={{ type: 'spring', duration: 1.5, delay: 1 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              MY WORK
+            </motion.h2>
+          </MYWORK> */}
         </BottomBar>
       </Container>
 
