@@ -11,7 +11,7 @@ export const projects = [
     tags: ['Mobile App', 'AI', 'Health', 'UX Research'],
     featured: 1,
     template: 'short',
-    image: spaceman,
+    
   },
   {
     id: 2,
@@ -24,20 +24,20 @@ export const projects = [
     tags: ['Web App', 'AI', 'SaaS', 'Product Design'],
     featured: 2,
     template: 'long',
-    image: null,
+    
   },
   {
     id: 3,
     number: '03',
     category: 'case-study',
     categoryLabel: 'CASE STUDY',
-    title: 'Celcius Logistics',
+    title: 'Transporter App',
     description:
-      'A B2B logistics dashboard enabling real-time fleet tracking, route optimization, and data-driven supply chain management.',
-    tags: ['Dashboard', 'B2B', 'Logistics', 'UI/UX'],
+      'A mobile-first logistics platform that helps transport operators manage trips, vehicles, drivers, invoices, and real-time shipment tracking from a single unified experience.',
+    tags: ['Mobile App', 'B2B', 'Logistics', 'Fleet Management'],
     featured: 3,
     template: 'long',
-    image: null,
+    
   },
   {
     id: 4,
@@ -46,11 +46,11 @@ export const projects = [
     categoryLabel: 'CASE STUDY',
     title: 'TMS Portal Enhancement',
     description:
-      'A comprehensive UX audit and redesign of a transport management portal, improving data visualization and user workflows.',
-    tags: ['UX Audit', 'Dashboard', 'Data Design'],
+      'An enterprise transport management platform redesigned to improve operational visibility, streamline workflows, and simplify daily logistics management for transport teams.',
+    tags: ['UX Audit', 'Dashboard', 'Saas', 'Logistics'],
     featured: 4,
     template: 'long',
-    image: null,
+    
   },
   {
     id: 5,
@@ -63,20 +63,20 @@ export const projects = [
     tags: ['Mobile App', 'EdTech', 'UI/UX'],
     featured: 5,
     template: 'short',
-    image: null,
+    
   },
   {
     id: 6,
     number: '06',
     category: 'other',
     categoryLabel: 'OTHER PROJECT',
-    title: 'Website Revamps',
+    title: 'Vlieg Engineering',
     description:
-      'A collection of before-and-after website redesigns focused on modern aesthetics, improved UX, and conversion optimization.',
-    tags: ['UI/UX', 'Web Design', 'Redesign'],
+      'An engineering automation platform that transforms complex calculations and manual workflows into streamlined digital processes, helping teams improve speed, accuracy, and operational efficiency.',
+    tags: ['B2B SaaS', 'Web Design', 'Redesign'],
     featured: 6,
     template: 'short',
-    image: null,
+    
   },
   {
     id: 7,
@@ -89,6 +89,32 @@ export const projects = [
     tags: ['Web App', 'AI', 'SaaS'],
     featured: 7,
     template: 'short',
-    image: null,
+    
+  },
+   {
+    id: 8,
+    number: '08',
+    category: 'other',
+    categoryLabel: 'OTHER PROJECT',
+    title: 'Reqbeam',
+    description:
+      'An open-source, Docker-first API testing platform designed for developers to create, test, and manage APIs efficiently with a lightweight, self-hosted workflow.',
+    tags: ['Open Source', 'UX/UI', 'SaaS'],
+    featured: 8,
+    template: 'short',
+    
+  },
+    {
+    id: 9,
+    number: '09',
+    category: 'case-study',
+    categoryLabel: 'CASE STUDY',
+    title: 'WMS Dashboard Enhancement',
+    description:
+      'A warehouse management platform enabling businesses to monitor inventory, warehouse utilization, pallet tracking, and temperature-sensitive storage operations in real time.',
+    tags: ['UX Audit', 'Dashboard', 'Enterprise SaaS', 'Logistics'],
+    featured: 9,
+    template: 'long',
+    
   },
 ]
