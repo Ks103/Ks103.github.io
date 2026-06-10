@@ -1,3 +1,12 @@
+import artus1 from '../assets/Images/Artus/artus1.svg';
+import artus2 from '../assets/Images/Artus/artus2.svg';
+import artus3 from '../assets/Images/Artus/artus3.svg';
+import out1 from '../assets/Images/Artus/out1.svg'
+import out2 from '../assets/Images/Artus/out2.svg'
+import out3 from '../assets/Images/Artus/out3.svg'
+import out4 from '../assets/Images/Artus/out4.svg'
+import out5 from '../assets/Images/Artus/out5.svg'
+import litebite1 from '../assets/Images/litebite/litebite1.svg'
 export const projectDetails = {
   1: {
     template: 'short',
@@ -10,7 +19,7 @@ export const projectDetails = {
       tags: ['Mobile App', 'AI', 'Health & Wellness', 'Nutrition', 'UX/UI Design'],
       ctaLabel: 'View Project',
       ctaLink: '#',
-      image: null,
+      image: litebite1,
       images: null,
     },
     overview: {
@@ -100,7 +109,7 @@ export const projectDetails = {
       ],
       ctaLabel: 'View Project',
       ctaLink: '#',
-      image: null,
+      image: artus1,
     },
     overview: {
       product: 'AI Product Development Platform',
@@ -157,7 +166,7 @@ export const projectDetails = {
           'High effort required to validate and prioritize opportunities',
           'Fragmented workflow between analysis and execution',
         ],
-        image: null,
+        image: artus2,
       },
       after: {
         title: 'WHAT CHANGED IN THE REDESIGN?',
@@ -168,7 +177,7 @@ export const projectDetails = {
           'Improved discoverability of AI-generated recommendations',
           'Reduced manual effort through structured outputs',
         ],
-        image: null,
+        image: artus3,
       },
     },
     outcome: {
@@ -176,11 +185,11 @@ export const projectDetails = {
       description:
         'The final experience transformed AI from a simple assistant into a collaborative product-building partner.',
       metrics: [
-        { value: '40%', label: 'Faster Product Planning' },
-        { value: '35%', label: 'Reduction in Documentation Effort' },
-        { value: '50%', label: 'Better Team Alignment' },
-        { value: '60%', label: 'Improved Workflow Visibility' },
-        { value: '45%', label: 'Faster Idea-to-Execution Journey' },
+        { value: '40%', label: 'Faster Product Planning', icon: out1 },
+        { value: '35%', label: 'Reduction in Documentation Effort', icon: out2 },
+        { value: '50%', label: 'Better Team Alignment', icon: out3 },
+        { value: '60%', label: 'Improved Workflow Visibility', icon: out4 },
+        { value: '45%', label: 'Faster Idea-to-Execution Journey', icon: out5 },
       ],
     },
     takeaway: {

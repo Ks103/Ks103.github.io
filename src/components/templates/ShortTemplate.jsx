@@ -100,7 +100,7 @@ const HeroImage = styled.div`
   min-height: 280px;
 
   img {
-    max-width: 45%;
+    max-width: 100%;
     object-fit: contain;
   }
 `

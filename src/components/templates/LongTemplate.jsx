@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom'
+import bulb from '../../assets/Images/bulb.svg'
 const Page = styled.div`
   padding: 5.5rem calc(2rem + 6vw) 4rem calc(2rem + 8vw);
   max-width: 1100px;
@@ -30,7 +31,7 @@ const HeroLabel = styled.span`
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.3rem;
 `
 
 const Brand = styled.div`
@@ -39,10 +40,10 @@ const Brand = styled.div`
   gap: 0.5rem;
   margin-bottom: 1rem;
 
-  span:first-child {
-    font-size: 1.1rem;
-    color: #e85d2a;
-  }
+  // span:first-child {
+  //   font-size: 1.1rem;
+  //   color: #e85d2a;
+  // }
 
   span:last-child {
     font-family: 'Karla', sans-serif;
@@ -112,6 +113,7 @@ const HeroImage = styled.div`
   img {
     width: 100%;
     max-width: 420px;
+    max-height: 350px;
     object-fit: contain;
   }
 `
@@ -280,7 +282,7 @@ const CompareGrid = styled.div`
 
 const CompareCard = styled(Card)`
   margin-bottom: 0;
-  padding: 1.5rem;
+  padding: 1.5rem 0.5rem 1.5rem 1.5rem;
 `
 
 const CompareTitle = styled.h3`
@@ -298,7 +300,7 @@ const CompareTitle = styled.h3`
 const CompareBody = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: start;
 
   @media (max-width: 600px) {
@@ -324,15 +326,16 @@ const CompareList = styled.ul`
 `
 
 const CompareThumb = styled.div`
-  width: 140px;
+  min-width: 120px;
   min-height: 120px;
+  max-width: 200px;
+  max-height: 200px;
   border: 1px dashed rgba(0, 0, 0, 0.12);
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.65rem;
-  opacity: 0.3;
   text-align: center;
   padding: 0.5rem;
 
@@ -344,55 +347,128 @@ const CompareThumb = styled.div`
   }
 `
 
-const OutcomeHeader = styled.div`
-  text-align: center;
+const OutcomeCard = styled.section`
+  border: 1.5px solid ${props => props.theme.text};
+  border-radius: 12px;
+  background-color: ${props => props.theme.body};
+
+  padding: 1.75rem;
+
+  display: flex;
+  align-items: center;
+
+  gap: 2rem;
+
   margin-bottom: 1.5rem;
 
-  h3 {
-    font-family: 'Karla', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: stretch;
   }
+`;
 
-  p {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.88rem;
-    opacity: 0.75;
+const OutcomeInfo = styled.div`
+  flex: 0 0 280px;
+  max-width: 280px;
+
+  @media (max-width: 900px) {
+    max-width: 100%;
   }
-`
+`;  
+
+const OutcomeTitle = styled.h3`
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-family: 'Karla', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+
+  span {
+    font-size: 1rem;
+  }
+`;
+
+const OutcomeDescription = styled.p`
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  opacity: 0.75;
+  margin: 0;
+`;
 
 const MetricsRow = styled.div`
+  flex: 1;
+
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  text-align: center;
 
   @media (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
   }
-`
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
 const Metric = styled.div`
-  padding: 0.5rem;
+  text-align: center;
+
+  padding: 0 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+
+  &:first-child {
+    border-left: none;
+  }
 
   strong {
     display: block;
+
     font-family: 'Karla', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 0.35rem;
+
+    margin-bottom: 0.6rem;
   }
 
   span {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.72rem;
-    line-height: 1.4;
-    opacity: 0.7;
+    font-size: 0.82rem;
+    line-height: 1.5;
+
+    opacity: 0.75;
   }
-`
+
+  @media (max-width: 900px) {
+    padding: 1.25rem;
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+`;
+
+const MetricIcon = styled.div`
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+`;
 
 const TakeawayCard = styled(Card)`
   display: grid;
@@ -412,8 +488,8 @@ const TakeawayLeft = styled.div`
 `
 
 const BulbIcon = styled.div`
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background-color: ${props => props.theme.text};
   color: ${props => props.theme.body};
@@ -422,13 +498,18 @@ const BulbIcon = styled.div`
   justify-content: center;
   flex-shrink: 0;
   font-size: 1.2rem;
+  img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
 `
 
 const TakeawayText = styled.div`
   h3 {
     font-family: 'Karla', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 800;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
@@ -444,7 +525,7 @@ const TakeawayText = styled.div`
 
 const StepsRow = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 0.5rem;
   position: relative;
@@ -455,7 +536,7 @@ const StepsRow = styled.div`
     top: 20px;
     left: 10%;
     right: 10%;
-    border-top: 1.5px dashed rgba(0, 0, 0, 0.2);
+    border-top: 1.5px dashed rgba(0, 0, 0, 0.8);
     z-index: 0;
   }
 `
@@ -489,6 +570,44 @@ const Step = styled.div`
     max-width: 90px;
   }
 `
+const BackLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1.5px solid ${props => props.theme.text};
+  border-radius: 50%;
+  color: ${props => props.theme.text};
+  text-decoration: none;
+  background-color: ${props => props.theme.body};
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background-color: ${props => props.theme.text};
+    color: ${props => props.theme.body};
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (max-width: 768px) {
+    left: 4.5rem;
+  }
+`
+
+const HeadingContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+`
+const SubheadingContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 const stepIcons = ['👤', '✦', '🤖', '◎']
 const listIcon = (type) => (type === 'before' ? '✕' : '✓')
@@ -513,11 +632,19 @@ const LongTemplate = ({ data }) => {
     <Page>
       <Hero>
         <div>
-          <HeroLabel>{hero.label}</HeroLabel>
-          <Brand>
-            <span>◢</span>
-            <span>{hero.brand}</span>
-          </Brand>
+          <HeadingContainer>
+            <BackLink to="/mywork" aria-label="Back to projects">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M19 12H5M11 6l-6 6 6 6" />
+              </svg>
+            </BackLink>
+            <SubheadingContainer>
+              <HeroLabel>{hero.label}</HeroLabel>
+              <Brand>
+                <span>{hero.brand}</span>
+              </Brand>
+            </SubheadingContainer>
+          </HeadingContainer>
           <HeroTitle>{hero.headline}</HeroTitle>
           <HeroDesc>{hero.description}</HeroDesc>
           <TagRow>
@@ -661,24 +788,38 @@ const LongTemplate = ({ data }) => {
         </CompareCard>
       </CompareGrid>
 
-      <Card>
-        <OutcomeHeader>
-          <h3>🏆 {outcome.title}</h3>
-          <p>{outcome.description}</p>
-        </OutcomeHeader>
+      <OutcomeCard>
+        <OutcomeInfo>
+          <OutcomeTitle>
+            <span>🏆</span>
+            {outcome.title}
+          </OutcomeTitle>
+
+          <OutcomeDescription>
+            {outcome.description}
+          </OutcomeDescription>
+        </OutcomeInfo>
+
         <MetricsRow>
-          {outcome.metrics.map(metric => (
+          {outcome.metrics.map((metric, index) => (
             <Metric key={metric.label}>
+              <MetricIcon>
+                <img src={metric.icon} alt="" />
+              </MetricIcon>
+
               <strong>{metric.value}</strong>
+
               <span>{metric.label}</span>
             </Metric>
           ))}
         </MetricsRow>
-      </Card>
+      </OutcomeCard>
 
       <TakeawayCard>
         <TakeawayLeft>
-          <BulbIcon>💡</BulbIcon>
+          <BulbIcon>
+            <img src={bulb}></img>
+          </BulbIcon>
           <TakeawayText>
             <h3>KEY TAKEAWAY</h3>
             <p>{takeaway.text}</p>
