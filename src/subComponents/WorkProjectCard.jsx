@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const Card = styled.article`
+const Card = styled(Link)`
   position: relative;
   display: flex;
   border: 1.5px solid ${props => props.theme.text};
@@ -11,15 +11,17 @@ const Card = styled.article`
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 48%;
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  }
+  text-decoration: none;
+
+  // &:hover {
+  //   transform: translateY(-2px);
+  //   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  // }
 
   @media (max-width: 900px) {
     flex-direction: column;
   }
-`
+`;
 
 const NumberBadge = styled.span`
   position: absolute;
@@ -176,7 +178,7 @@ const WorkProjectCard = ({ project, activeTab }) => {
   const { id, number, categoryLabel, title, description, tags, image } = project
 
   return (
-    <Card>
+    <Card to={`/mywork`}>
       {/* <NumberBadge>{number}</NumberBadge> */}
       <DotGrid>
         {Array.from({ length: 9 }).map((_, i) => (
@@ -195,20 +197,20 @@ const WorkProjectCard = ({ project, activeTab }) => {
             <Tag key={tag}>{tag}</Tag>
           ))}
         </Tags>
-        <ArrowLink to={`/mywork/${id}`} aria-label={`View ${title}`}>
+        {/* <ArrowLink to={`/mywork/${id}`} aria-label={`View ${title}`}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
-        </ArrowLink>
+        </ArrowLink> */}
       </Content>
 
-      <ImageWrapper>
+      {/* <ImageWrapper>
         {image ? (
           <img src={image} alt={title} />
         ) : (
           <Placeholder>{title}</Placeholder>
         )}
-      </ImageWrapper>
+      </ImageWrapper> */}
     </Card>
   )
 }

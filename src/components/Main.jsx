@@ -229,7 +229,7 @@ const Main = () => {
             </motion.h2>
           </SKILLS>
 
-          {/* <MYWORK to="/mywork">
+          <MYWORK to="/mywork">
             <motion.h2
               initial={{ y: 200 }}
               animate={{ y: 0 }}
@@ -239,7 +239,7 @@ const Main = () => {
             >
               MY WORK
             </motion.h2>
-          </MYWORK> */}
+          </MYWORK>
         </BottomBar>
       </Container>
 
