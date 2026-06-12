@@ -111,7 +111,7 @@ const MySkillsPage = () => {
       <Box>
         <LogoComponent theme="light" />
         <SocialIcons theme="light" />
-        <PowerButton />
+        {/* <PowerButton /> */}
         <ParticleComponent theme="light" />
 
         <Main>

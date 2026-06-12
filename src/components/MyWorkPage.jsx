@@ -270,7 +270,7 @@ const MyWorkPage = () => {
       <Box>
         <LogoComponent theme="light" />
         <SocialIcons theme="light" />
-        <PowerButton />
+        {/* <PowerButton /> */}
         <ParticleComponent theme="light" />
 
         <Contact href="mailto:kkhushi3058@gmail.com" target="_blank" rel="noreferrer">

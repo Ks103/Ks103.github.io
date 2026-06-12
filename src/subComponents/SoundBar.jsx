@@ -6,9 +6,9 @@ import music from "../assets/audio/watr-fluid-10149.mp3"
 const Box = styled.div`
 display:flex;
 cursor:pointer;
-position:fixed;
+position:absolute;
 left:7rem;
-top:2.7rem;
+top:3.1rem;
 z-index:10;
 
 &>*:nth-child(1){

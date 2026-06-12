@@ -150,7 +150,7 @@ const DarkDiv = styled.div`
 `
 
 const Main = () => {
-  const [click, setClick] = useState(false)
+  const [click, setClick] = useState(true)
   const handleClick = () => setClick(!click)
 
   return (
@@ -158,11 +158,11 @@ const Main = () => {
       <DarkDiv click={click} />
 
       <Container>
-        <PowerButton />
+        {/* <PowerButton /> */}
         <LogoComponent theme={click ? 'dark' : 'light'} />
         <SocialIcons theme={click ? 'dark' : 'light'} />
 
-        <Center click={click}>
+        {/* <Center click={click}>
           <Yin
             onClick={handleClick}
             width={click ? 120 : 200}
@@ -170,7 +170,7 @@ const Main = () => {
             fill="currentColor"
           />
           <span>click me</span>
-        </Center>
+        </Center> */}
 
         <Contact href="mailto:kkhushi3058@gmail.com" target="_blank" rel="noreferrer">
           <motion.h2

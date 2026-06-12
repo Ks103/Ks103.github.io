@@ -27,8 +27,8 @@ const Hero = styled.section`
 const HeroLabel = styled.span`
   display: block;
   font-family: 'Karla', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 0.3rem;
@@ -37,20 +37,8 @@ const HeroLabel = styled.span`
 const Brand = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-
-  // span:first-child {
-  //   font-size: 1.1rem;
-  //   color: #e85d2a;
-  // }
-
-  span:last-child {
-    font-family: 'Karla', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-  }
+  font-size: 2rem;
+  font-weight: bolder;
 `
 
 const HeroTitle = styled.h1`
@@ -574,8 +562,8 @@ const BackLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border: 1.5px solid ${props => props.theme.text};
   border-radius: 50%;
   color: ${props => props.theme.text};
@@ -600,7 +588,7 @@ const BackLink = styled(Link)`
 
 const HeadingContainer = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
 `
@@ -640,11 +628,11 @@ const LongTemplate = ({ data }) => {
             </BackLink>
             <SubheadingContainer>
               <HeroLabel>{hero.label}</HeroLabel>
-              <Brand>
-                <span>{hero.brand}</span>
-              </Brand>
             </SubheadingContainer>
           </HeadingContainer>
+          <Brand>
+            <img src={hero.logo}></img>
+          </Brand>
           <HeroTitle>{hero.headline}</HeroTitle>
           <HeroDesc>{hero.description}</HeroDesc>
           <TagRow>

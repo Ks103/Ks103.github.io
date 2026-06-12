@@ -1,6 +1,7 @@
 import artus1 from '../assets/Images/Artus/artus1.svg';
 import artus2 from '../assets/Images/Artus/artus2.svg';
 import artus3 from '../assets/Images/Artus/artus3.svg';
+import artus4 from '../assets/Images/Artus/artus4.svg';
 import out1 from '../assets/Images/Artus/out1.svg'
 import out2 from '../assets/Images/Artus/out2.svg'
 import out3 from '../assets/Images/Artus/out3.svg'
@@ -97,6 +98,7 @@ export const projectDetails = {
     hero: {
       label: 'CASE STUDY',
       brand: 'ARTUS',
+      logo: artus4,
       headline: 'Transforming Ideas into Products Through AI Agents',
       description:
         'A collaborative AI workspace that helps teams move from idea → requirements → prototypes → execution using specialized AI agents.',

@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import {motion} from 'framer-motion'
 import Me from '../assets/Images/p2.png'
 
+const helloText = 'Hello...';
+const roleText = "I'm Khushi Product Designer";
+const descText =
+  'I specialize in turning in intractable business problems into clear, measurable impact';
 
 const Box = styled(motion.div)`
 
@@ -38,6 +42,60 @@ background-size: 100% 2px;
         top: 35%;
     }
 `
+
+const ContentSubBox = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  font-size: calc(1em + 1.5vw);
+  color: rgb(252, 246, 244);
+
+  padding-left: 2rem;
+`;
+const blink = `
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+`;
+
+const TypeHeading = styled.h2`
+  margin: 0;
+`;
+
+const TypeRole = styled.h5`
+  margin: 0.5rem 0;
+`;
+
+const TypeDesc = styled.h6`
+  margin-top: 1rem;
+  font-weight: 300;
+`;
+
+const CursorText = styled.span`
+  &::after {
+    content: '|';
+    animation: blink 0.8s infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+`;
+
 const SubBox = styled.div`
 width: 50%;
 position: relative;
@@ -46,7 +104,7 @@ display: flex;
 .pic{
     position: absolute;
     bottom: 1%;
-    left: 45%;
+    left: 50%;
     transform: translate(-50%,0%);
     width: 106%;
     height: 90%;
@@ -57,41 +115,75 @@ display: flex;
 }
 `
 
-const Text = styled.div`
-font-size: calc(1em + 1.5vw);
-color: ${props => props.theme.body};
-padding: 2rem;
-cursor: pointer;
-
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-
-&>*:last-child{
-    color: ${props => `rgba(${props.theme.bodyRgba},0.6)` };
-    font-size: calc(0.5rem + 1.5vw);
-    font-weight:300;
-
-}
-
-
-
-`
-
 const Intro = () => {
+    const [hello, setHello] = useState('');
+    const [role, setRole] = useState('');
+    const [desc, setDesc] = useState('');
+    const [showRoleCursor, setShowRoleCursor] = useState(false);
+    const [showDescCursor, setShowDescCursor] = useState(false);
+    useEffect(() => {
+        let i = 0;
+    
+        const helloInterval = setInterval(() => {
+          setHello(helloText.slice(0, i + 1));
+          i++;
+    
+          if (i === helloText.length) {
+            clearInterval(helloInterval);
+          
+            setShowRoleCursor(true);
+          
+            let j = 0;
+          
+            const roleInterval = setInterval(() => {
+              setRole(roleText.slice(0, j + 1));
+              j++;
+    
+              if (j === roleText.length) {
+                clearInterval(roleInterval);
+                setShowRoleCursor(false);   // <-- add this
+                setShowDescCursor(true);
+                let k = 0;
+    
+                const descInterval = setInterval(() => {
+                  setDesc(descText.slice(0, k + 1));
+                  k++;
+    
+                  if (k === descText.length) {
+                    clearInterval(descInterval);
+                  
+                    setShowDescCursor(false);
+                  }
+                }, 20); // fast
+              }
+            }, 60); // medium
+          }
+        }, 150); // slow
+    
+        return () => {};
+      }, []);
     return (
         <Box
         initial={{height:0}}
         animate={{height: '55vh'}}
-        transition={{ type: 'spring', duration:2, delay:1 }}
         >
-            <SubBox>
-                <Text>
-                    <h2>Hello...</h2>
-                    <h5>I'm UX Designer | UI Specialist | Mentor</h5>
-                    <h6>Designing user-first products, specializing in UI systems, and mentoring the next generation of designers. </h6>
-                </Text>
-            </SubBox>
+            <ContentSubBox>
+                <ContentWrapper>
+                    <TypeHeading>
+                    {hello}
+                    </TypeHeading>
+
+                    <TypeRole>
+                    {role}
+                    {showRoleCursor && <CursorText />}
+                    </TypeRole>
+
+                    <TypeDesc>
+                    {desc}
+                    {showDescCursor && <CursorText />}
+                    </TypeDesc>
+                </ContentWrapper>
+                </ContentSubBox>
             <SubBox>
                 <motion.div
                 initial={{opacity:0}}

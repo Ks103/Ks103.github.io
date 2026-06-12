@@ -3,11 +3,12 @@ import styled from 'styled-components'
 
 
 const Text = styled.h1`
-position: fixed;
+position: ${props => props.position || 'fixed'};
 top: ${props => props.top};
 left: ${props => props.left};
 right: ${props => props.right};
-color:${props => `rgba(${props.theme.textRgba},0.05)`};
+color: ${props =>
+    `rgba(${props.theme.textRgba}, ${props.opacity || 0.05})`};
 font-size: calc(5rem + 5vw);
 z-index:0;
 
@@ -16,7 +17,7 @@ z-index:0;
 
 const BigTitlte = (props) => {
     return (
-        <Text  top={props.top}  left={props.left}  right={props.right}>
+        <Text position={props.position}  top={props.top}  left={props.left}  right={props.right} opacity={props.opacity}>
             {props.text}
         </Text>
     )
