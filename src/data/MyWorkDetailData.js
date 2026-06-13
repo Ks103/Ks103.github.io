@@ -20,12 +20,35 @@ import artus19 from '../assets/Images/Artus/artus19.svg';
 import artus20 from '../assets/Images/Artus/artus20.svg';
 import artus21 from '../assets/Images/Artus/artus21.svg';
 import artus22 from '../assets/Images/Artus/artus22.svg';
-import out1 from '../assets/Images/Artus/out1.svg'
-import out2 from '../assets/Images/Artus/out2.svg'
-import out3 from '../assets/Images/Artus/out3.svg'
-import out4 from '../assets/Images/Artus/out4.svg'
-import out5 from '../assets/Images/Artus/out5.svg'
-import litebite1 from '../assets/Images/litebite/litebite1.svg'
+import out1 from '../assets/Images/Artus/out1.svg';
+import out2 from '../assets/Images/Artus/out2.svg';
+import out3 from '../assets/Images/Artus/out3.svg';
+import out4 from '../assets/Images/Artus/out4.svg';
+import out5 from '../assets/Images/Artus/out5.svg';
+import litebite1 from '../assets/Images/litebite/litebite1.svg';
+import litebite2 from '../assets/Images/litebite/litebite2.svg';
+import litebite3 from '../assets/Images/litebite/litebite3.svg';
+import litebite4 from '../assets/Images/litebite/litebite4.svg';
+import litebite5 from '../assets/Images/litebite/litebite5.svg';
+import litebite6 from '../assets/Images/litebite/litebite6.svg';
+import litebite7 from '../assets/Images/litebite/litebite7.svg';
+import litebite8 from '../assets/Images/litebite/litebite8.svg';
+import litebite9 from '../assets/Images/litebite/litebite9.svg';
+import litebite10 from '../assets/Images/litebite/litebite10.svg';
+import litebite11 from '../assets/Images/litebite/litebite11.svg';
+import litebite12 from '../assets/Images/litebite/litebite12.svg';
+import litebite13 from '../assets/Images/litebite/litebite13.svg';
+import litebite14 from '../assets/Images/litebite/litebite14.svg';
+import litebite15 from '../assets/Images/litebite/litebite15.svg';
+import litebite16 from '../assets/Images/litebite/litebite16.svg';
+import litebite17 from '../assets/Images/litebite/litebite17.svg';
+import litebite18 from '../assets/Images/litebite/litebite18.svg';
+import litebite19 from '../assets/Images/litebite/litebite19.svg';
+import litebite20 from '../assets/Images/litebite/litebite20.svg';
+import litebite21 from '../assets/Images/litebite/litebite21.svg';
+import litebite22 from '../assets/Images/litebite/litebite22.svg';
+import litebite23 from '../assets/Images/litebite/litebite23.svg';
+import litebite24 from '../assets/Images/litebite/litebite24.svg';
 export const projectDetails = {
   1: {
     template: 'short',
@@ -39,13 +62,18 @@ export const projectDetails = {
       ctaLabel: 'View Project',
       ctaLink: '#',
       image: litebite1,
+      logo: litebite24,
       images: null,
     },
     overview: {
       role: 'Product Designer (End-to-End)',
+      roleImg: litebite2,
       timeline: 'Jan 2024 – Mar 2024 (3 Months)',
+      timelineImg: litebite3,
       platform: 'Android',
+      platformImg: litebite4,
       tools: ['Figma', 'Figjam', 'Notion', 'UX'],
+      toolsImg: litebite5
     },
     problem: {
       description:
@@ -57,57 +85,58 @@ export const projectDetails = {
         'Low motivation to maintain consistency',
         'Complicated subscription management',
       ],
+      pointImg: litebite6
     },
     goal: {
       description:
         'Create a flexible, personalized nutrition experience that simplifies healthy eating through AI-driven meal planning and effortless tracking.',
       cards: [
-        { icon: '🍽', title: 'Personalized AI', subtitle: 'Meal Plans' },
-        { icon: '📊', title: 'Track Calories', subtitle: 'Macros & Progress' },
-        { icon: '🔄', title: 'Easy Meal Swap', subtitle: 'Anytime' },
-        { icon: '💳', title: 'Hassle Free', subtitle: 'Subscription' },
-        { icon: '🎁', title: 'Rewards', subtitle: 'For Users' },
-        { icon: '✨', title: 'Simplify Healthy', subtitle: 'Eating Journey' },
+        { image: litebite7, title: 'Personalized AI', subtitle: 'Meal Plans' },
+        { image: litebite8, title: 'Track Calories', subtitle: 'Macros & Progress' },
+        { image: litebite9, title: 'Easy Meal Swap', subtitle: 'Anytime' },
+        { image: litebite10, title: 'Hassle Free', subtitle: 'Subscription' },
+        { image: litebite11, title: 'Rewards', subtitle: 'For Users' },
+        { image: litebite12, title: 'Simplify Healthy', subtitle: 'Eating Journey' },
       ],
     },
     process: [
-      { title: 'Discover', description: 'User research, competitor analysis & insights' },
-      { title: 'Define', description: 'User personas, problem statements & goals' },
-      { title: 'Idea', description: 'User flows, information architecture, sketches' },
-      { title: 'Design', description: 'Wireframes, UI design, prototypes' },
-      { title: 'Test', description: 'Usability testing, feedback & iterations' },
-      { title: 'Deliver', description: 'Handoff, design system & implementation' },
+      { title: 'Discover', description: 'User research, competitor analysis & insights', image: litebite13 },
+      { title: 'Define', description: 'User personas, problem statements & goals', image: litebite14 },
+      { title: 'Idea', description: 'User flows, information architecture, sketches', image: litebite15 },
+      { title: 'Design', description: 'Wireframes, UI design, prototypes', image: litebite16 },
+      { title: 'Test', description: 'Usability testing, feedback & iterations', image: litebite17 },
+      { title: 'Deliver', description: 'Handoff, design system & implementation', image: litebite18 },
     ],
     features: [
       {
         title: 'AI Meal Planner',
         description:
-          'Generates personalized meal recommendations based on fitness goals, dietary preferences, allergies, and lifestyle habits.',
-        image: null,
+          'Generates personalized meal recommendations based on fitness goals, dietary preferences & allergies.',
+        image: litebite19,
       },
       {
         title: 'Meal Swap',
         description:
           'Allows users to instantly replace meals while automatically maintaining nutritional balance.',
-        image: null,
+        image: litebite20,
       },
       {
         title: 'Nutrition Tracking',
         description:
           'Tracks calories, protein, carbs, fats, water intake, and overall progress through simple visual dashboards.',
-        image: null,
+        image: litebite21,
       },
       {
         title: 'Subscription Management',
         description:
           'Flexible subscription controls allowing users to pause, freeze, upgrade, or cancel plans anytime.',
-        image: null,
+        image: litebite22,
       },
       {
         title: 'Rewards Zone',
         description:
           'Encourages consistency through points, rewards, vouchers, and healthy habit milestones.',
-        image: null,
+        image: litebite23,
       },
     ],
   },
@@ -139,7 +168,7 @@ export const projectDetails = {
       platformImage: artus7,
       timeline: 'Jan 2024 – Mar 2025',
       timelineImage: artus8,
-      role: 'Led end-to-end product design including UX strategy, information architecture, interaction design, and design system development. Collaborated closely with founders and engineers to shape the AI-driven product workflow.',
+      role: 'Led end-to-end product design including UX strategy, information architecture, interaction design, and design system development.',
       roleImage: artus9,
       team: ['2 Founder', '2 Product Designer', '2 Engineers'],
       teamImage: artus10,

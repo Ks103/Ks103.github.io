@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Page = styled.div`
   padding: 5.5rem calc(2rem + 6vw) 4rem calc(2rem + 8vw);
@@ -10,13 +11,49 @@ const Page = styled.div`
     padding: 5rem 1.25rem 3rem;
   }
 `
+const HeadingContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+`
+const SubheadingContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+const BackLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1.5px solid ${props => props.theme.text};
+  border-radius: 50%;
+  color: ${props => props.theme.text};
+  text-decoration: none;
+  background-color: ${props => props.theme.body};
+  transition: background-color 0.2s ease, color 0.2s ease;
 
+  &:hover {
+    background-color: ${props => props.theme.text};
+    color: ${props => props.theme.body};
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (max-width: 768px) {
+    left: 4.5rem;
+  }
+`
 const Hero = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
@@ -26,20 +63,34 @@ const Hero = styled.section`
 const HeroLabel = styled.span`
   display: block;
   font-family: 'Karla', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
 `
 
-const Brand = styled.h1`
-  font-family: 'Karla', sans-serif;
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
+const Brand = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bolder;
 `
+
+const HeroTitle = styled.h1`
+  font-family: 'Karla', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+`
+
+const HeroDesc = styled.p`
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.75;
+  margin-bottom: 1.25rem;
+`
+
 
 const HeroSubtitle = styled.h2`
   font-family: 'Karla', sans-serif;
@@ -47,14 +98,6 @@ const HeroSubtitle = styled.h2`
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 0.75rem;
-`
-
-const HeroDesc = styled.p`
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 0.92rem;
-  line-height: 1.6;
-  opacity: 0.75;
-  margin-bottom: 1.25rem;
 `
 
 const TagRow = styled.div`
@@ -96,14 +139,16 @@ const HeroImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   min-height: 280px;
 
   img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
+    max-height: 350px;
     object-fit: contain;
   }
 `
+
 
 const ImagePlaceholder = styled.div`
   width: 100%;
@@ -140,10 +185,20 @@ const OverviewBar = styled.div`
   }
 `
 
-const OverviewItem = styled.div`
-  padding: 0 1rem;
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
-
+const MetaBlock = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 0rem 1rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  gap: 1rem;
+  img{
+    max-width: 24px;
+    max-height: 24px;
+  }
+  p{
+    font-size: 0.8rem;  
+    opacity: 0.75;
+  }
   &:first-child {
     padding-left: 0;
   }
@@ -152,29 +207,24 @@ const OverviewItem = styled.div`
     border-right: none;
     padding-right: 0;
   }
-
-  @media (max-width: 768px) {
-    border-right: none;
+`
+const BlockItemRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  span{
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  ul {
+    list-style: none;
     padding: 0;
-  }
-
-  h4 {
-    font-family: 'Karla', sans-serif;
-    font-size: 0.62rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.5;
-    margin-bottom: 0.4rem;
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-
-  p {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.82rem;
-    line-height: 1.4;
+    margin: 0;
+    li {
+      list-style: none;
+      opacity: 0.75;
+      font-size: 0.8rem;  
+    }
   }
 `
 
@@ -222,11 +272,8 @@ const ProblemGoalCol = styled.div`
 `
 
 const SectionHeading = styled.h3`
-  font-family: 'Karla', sans-serif;
-  font-size: 0.72rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -235,16 +282,15 @@ const SectionHeading = styled.h3`
   &::after {
     content: '';
     flex: 1;
-    height: 1px;
+    height: 3px;
+    max-width: 100px;
     background-color: rgba(0, 0, 0, 0.15);
   }
 `
 
 const BodyText = styled.p`
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 0.85rem;
-  line-height: 1.6;
-  opacity: 0.8;
+  font-size: 0.8rem;
+  opacity: 0.75;
   margin-bottom: 0.75rem;
 `
 
@@ -290,13 +336,18 @@ const GoalCard = styled.div`
   border-radius: 8px;
   padding: 0.75rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5rem;
   background-color: rgba(0, 0, 0, 0.02);
 
   span:first-child {
     font-size: 0.9rem;
     flex-shrink: 0;
+  }
+
+  img{
+    width: 18px;
+    height: 18px;
   }
 
   div {
@@ -306,8 +357,7 @@ const GoalCard = styled.div`
 
     strong {
       display: block;
-      font-family: 'Karla', sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.8rem;
       font-weight: 600;
       margin-bottom: 0.15rem;
     }
@@ -324,7 +374,9 @@ const ProcessHeading = styled(SectionHeading)`
   color: ${props => props.theme.body};
 
   &::after {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+    max-width: 100px;
   }
 `
 
@@ -376,19 +428,21 @@ const ProcessStep = styled.div`
     justify-content: center;
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    img{
+      width: 24px;
+      height: 24px;
+    }
   }
 
   strong {
-    font-family: 'Karla', sans-serif;
-    font-size: 0.68rem;
+    font-size: 0.8rem;
     font-weight: 600;
     display: block;
     margin-bottom: 0.25rem;
   }
 
   span {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.62rem;
+    font-size: 0.6rem;
     line-height: 1.4;
     opacity: 0.75;
   }
@@ -432,23 +486,17 @@ const FeatureCol = styled.div`
 
 const FeatureMockup = styled.div`
   width: 100%;
-  aspect-ratio: 9 / 16;
   max-width: 130px;
-  border: 1px dashed rgba(0, 0, 0, 0.12);
-  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.6rem;
-  opacity: 0.35;
   text-align: center;
   padding: 0.5rem;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
   }
 `
 
@@ -461,8 +509,19 @@ const ShortTemplate = ({ data }) => {
     <Page>
       <Hero>
         <div>
-          <HeroLabel>{hero.label}</HeroLabel>
-          <Brand>{hero.brand}</Brand>
+        <HeadingContainer>
+            <BackLink to="/mywork" aria-label="Back to projects">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M19 12H5M11 6l-6 6 6 6" />
+              </svg>
+            </BackLink>
+            <SubheadingContainer>
+              <HeroLabel>{hero.label}</HeroLabel>
+            </SubheadingContainer>
+          </HeadingContainer>
+          <Brand>
+            <img src={hero.logo}></img>
+          </Brand>
           <HeroSubtitle>{hero.subtitle}</HeroSubtitle>
           <HeroDesc>{hero.description}</HeroDesc>
           <TagRow>
@@ -487,26 +546,38 @@ const ShortTemplate = ({ data }) => {
 
       <Card>
         <OverviewBar>
-          <OverviewItem>
-            <h4>▣ MY ROLE</h4>
-            <p>{overview.role}</p>
-          </OverviewItem>
-          <OverviewItem>
-            <h4>📅 TIMELINE</h4>
-            <p>{overview.timeline}</p>
-          </OverviewItem>
-          <OverviewItem>
-            <h4>📱 PLATFORM</h4>
-            <p>{overview.platform}</p>
-          </OverviewItem>
-          <OverviewItem>
-            <h4>✦ TOOLS</h4>
-            <ToolTags>
-              {overview.tools.map(tool => (
-                <span key={tool}>{tool}</span>
-              ))}
-            </ToolTags>
-          </OverviewItem>
+          <MetaBlock>
+            <img src={overview.roleImg} alt="Product" />
+            <BlockItemRight>
+              <span>MY ROLE</span>
+              <p>{overview.role}</p>
+            </BlockItemRight>
+          </MetaBlock>
+          <MetaBlock>
+            <img src={overview.timelineImg} alt="timeline" />
+            <BlockItemRight>
+              <span>TIMELINE</span>
+              <p>{overview.timeline}</p>
+            </BlockItemRight>
+          </MetaBlock>
+          <MetaBlock>
+            <img src={overview.platformImg} alt="platform" />
+            <BlockItemRight>
+              <span>PLATFORM</span>
+              <p>{overview.platform}</p>
+            </BlockItemRight>
+          </MetaBlock>
+          <MetaBlock>
+            <img src={overview.toolsImg} alt="platform" />
+            <BlockItemRight>
+              <span>TOOLS</span>
+              <ToolTags>
+                {overview.tools.map(tool => (
+                  <span key={tool}>{tool}</span>
+                ))}
+              </ToolTags>
+            </BlockItemRight>
+          </MetaBlock>
         </OverviewBar>
       </Card>
 
@@ -518,7 +589,7 @@ const ShortTemplate = ({ data }) => {
             <XList>
               {problem.points.map(point => (
                 <li key={point}>
-                  <span>✕</span>
+                  <img src={problem.pointImg}></img>
                   {point}
                 </li>
               ))}
@@ -530,7 +601,7 @@ const ShortTemplate = ({ data }) => {
             <GoalGrid>
               {goal.cards.map(card => (
                 <GoalCard key={card.title}>
-                  <span>{card.icon}</span>
+                  <img src={card.image}></img>
                   <div>
                     <strong>{card.title}</strong>
                     {card.subtitle}
@@ -546,7 +617,7 @@ const ShortTemplate = ({ data }) => {
           <ProcessRow>
             {process.map((step, i) => (
               <ProcessStep key={step.title}>
-                <div>{processIcons[i]}</div>
+                <div><img src={step.image}></img></div>
                 <strong>{step.title}</strong>
                 <span>{step.description}</span>
               </ProcessStep>

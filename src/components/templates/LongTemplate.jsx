@@ -99,7 +99,7 @@ const HeroImage = styled.div`
   img {
     width: 100%;
     max-width: 500px;
-    max-height: 300px;
+    max-height: 350px;
     object-fit: contain;
   }
 `
