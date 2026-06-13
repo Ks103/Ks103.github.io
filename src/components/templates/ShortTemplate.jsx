@@ -62,10 +62,8 @@ const Hero = styled.section`
 
 const HeroLabel = styled.span`
   display: block;
-  font-family: 'Karla', sans-serif;
   font-size: 1rem;
   font-weight: 800;
-  margin-bottom: 0.3rem;
 `
 
 const Brand = styled.div`
