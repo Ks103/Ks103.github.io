@@ -39,6 +39,7 @@ const Grid = styled.div`
 display: grid;
 grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
 grid-gap: calc(2rem + 2vw);
+margin: 0rem 5rem;
 `
 
 // Framer-motion config
@@ -77,22 +78,19 @@ const BlogPage = () => {
         >
             <Container>
                 <LogoComponent />
-                <PowerButton />
                 <SocialIcons />
                 <AnchorComponent number={numbers}/>
-<Center>
-<Grid>
-
-{
-    Blogs.map(blog => {
-        return <BlogComponent key={blog.id} blog={blog} />
-    })
-}
-</Grid>
-
-</Center>
-<BigTitle text="ACHIEVEMENTS" top="5rem" left="5rem" />
-            </Container>
+                <Center>
+                <Grid>
+                {
+                    Blogs.map(blog => {
+                        return <BlogComponent key={blog.id} blog={blog} />
+                    })
+                }
+                </Grid>
+                </Center>
+                <BigTitle text="ACHIEVEMENTS" top="3rem" left="7rem" opacity='0.05'/>
+                </Container>
         </MainContainer>
     )
 }

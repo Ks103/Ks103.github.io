@@ -4,50 +4,80 @@ import React from "react";
 import styled from "styled-components";
 
 const Box = styled(motion.a)`
+  width: 100%;
+  background: #fcf6f4;
+  border: 1px solid #e6e6e6;
+  border-radius: 24px;
+
+  overflow: hidden;
   text-decoration: none;
-    width: 65%;
-    height: 80%;
-    padding: 2.5rem;
-    color: rgb(0, 0, 0);
-    border: 2px solid rgb(0, 0, 0);
-    backdrop-filter: blur(2px);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1rem 0px;
-    cursor: pointer;
-    display: flex;
-    flex-flow: column-reverse wrap;
-    z-index: 5;
-    margin-left: 15%;
-    place-content: stretch space-around;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.3s ease;
 
   &:hover {
-    color: ${(props) => props.theme.body};
-    background-color: ${(props) => props.theme.text};
-    transition: all 0.3s ease;
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
   }
 `;
 
+const ImageWrapper = styled.div`
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+  }
+
+  ${Box}:hover & img {
+    transform: scale(1.05);
+  }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+`;
+
+const Content = styled.div`
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+`;
 
 const Title = styled.h3`
-  color: inherit;
-  padding: 0.5rem 0;
-  padding-top: 1rem;
-  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
   font-weight: 700;
-  border-bottom: 1px solid ${(props) => props.theme.text};
+`;
+const Description = styled.p`
+  font-size: 0.9rem;
+  font-weight: 500;
+`;
+// const ViewLink = styled.div`
+//   margin-top: 1rem;
 
-  ${Box}:hover & {
-    border-bottom: 1px solid ${(props) => props.theme.body};
-  }
-`;
-const HashTags = styled.div`
-  padding: 0.5rem 0;
-`;
-const Tag = styled.span`
-  padding-right: 0.5rem;
-`;
-const Date = styled.span`
-  padding: 0.5rem 0;
-`;
+//   display: flex;
+//   align-items: center;
+//   gap: 0.5rem;
+
+//   font-size: 1.1rem;
+//   font-weight: 600;
+
+//   color: #111;
+
+//   span {
+//     transition: transform 0.3s ease;
+//   }
+
+//   ${Box}:hover & span {
+//     transform: translate(4px, -4px);
+//   }
+// `;
 
 const Container = styled(motion.div)``;
 
@@ -66,18 +96,26 @@ const Item = {
 };
 
 const BlogComponent = (props) => {
-  const { name, tags, date, link } = props.blog;
+  const { name, description, image, link } = props.blog;
   return (
     <Container variants={Item}>
-      <Box target="_blank" rel="noreferrer" href={`${link}`}>
-        
-        <Title>{name}</Title>
-        <HashTags>
-          {tags.map((t, id) => {
-            return <Tag key={id}>#{t}</Tag>;
-          })}
-        </HashTags>
-        <Date>{date}</Date>
+      <Box target="_blank" rel="noreferrer" href={link}>
+        <ImageWrapper>
+          <img src={image} alt={name} />
+        </ImageWrapper>
+
+        <Content>
+          <Title>{name}</Title>
+
+          <Description>
+            {description}
+          </Description>
+
+          {/* <ViewLink>
+            View
+            <span>↗</span>
+          </ViewLink> */}
+        </Content>
       </Box>
     </Container>
   );
