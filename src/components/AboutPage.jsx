@@ -45,7 +45,7 @@ const Spaceman = styled.div`
 const Main =  styled.div`
   border: 2px solid rgb(252, 246, 244);
     color: rgb(252, 246, 244);
-    padding: 1.5rem;
+    padding: 0rem 1.5rem;
     width: 60vw;
     height: calc(var(--vh) * 65);
     z-index: 3;

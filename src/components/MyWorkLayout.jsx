@@ -17,7 +17,7 @@ const Box = styled.div`
 
 const Contact = styled.a`
   color: ${props => props.theme.text};
-  position: fixed;
+  position: absolute;
   top: 2rem;
   right: calc(1rem + 2vw);
   text-decoration: none;
@@ -51,7 +51,7 @@ const MyWorkLayout = ({ children, watermark = 'WORK' }) => {
           </motion.h2>
         </Contact>
 
-        <BigTitle text={watermark} top="8%" right="20%" />
+        <BigTitle text={watermark} position='absolute' top="1%" right="25%" />
         <Content>{children}</Content>
       </Box>
     </ThemeProvider>

@@ -217,7 +217,7 @@ const Main = () => {
             </motion.h2>
           </ABOUT>
 
-          <SKILLS to="/skills">
+          {/* <SKILLS to="/skills">
             <motion.h2
               initial={{ y: 200 }}
               animate={{ y: 0 }}
@@ -227,7 +227,7 @@ const Main = () => {
             >
               MY SKILLS
             </motion.h2>
-          </SKILLS>
+          </SKILLS> */}
 
           <MYWORK to="/mywork">
             <motion.h2

@@ -2,6 +2,24 @@ import artus1 from '../assets/Images/Artus/artus1.svg';
 import artus2 from '../assets/Images/Artus/artus2.svg';
 import artus3 from '../assets/Images/Artus/artus3.svg';
 import artus4 from '../assets/Images/Artus/artus4.svg';
+import artus5 from '../assets/Images/Artus/artus5.svg';
+import artus6 from '../assets/Images/Artus/artus6.svg';
+import artus7 from '../assets/Images/Artus/artus7.svg';
+import artus8 from '../assets/Images/Artus/artus8.svg';
+import artus9 from '../assets/Images/Artus/artus9.svg';
+import artus10 from '../assets/Images/Artus/artus10.svg';
+import artus11 from '../assets/Images/Artus/artus11.svg';
+import artus12 from '../assets/Images/Artus/artus12.svg';
+import artus13 from '../assets/Images/Artus/artus13.svg';
+import artus14 from '../assets/Images/Artus/artus14.svg';
+import artus15 from '../assets/Images/Artus/artus15.svg';
+import artus16 from '../assets/Images/Artus/artus16.svg';
+import artus17 from '../assets/Images/Artus/artus17.svg';
+import artus18 from '../assets/Images/Artus/artus18.svg';
+import artus19 from '../assets/Images/Artus/artus19.svg';
+import artus20 from '../assets/Images/Artus/artus20.svg';
+import artus21 from '../assets/Images/Artus/artus21.svg';
+import artus22 from '../assets/Images/Artus/artus22.svg';
 import out1 from '../assets/Images/Artus/out1.svg'
 import out2 from '../assets/Images/Artus/out2.svg'
 import out3 from '../assets/Images/Artus/out3.svg'
@@ -114,11 +132,17 @@ export const projectDetails = {
       image: artus1,
     },
     overview: {
+      headingImage: artus5,
       product: 'AI Product Development Platform',
+      productImage: artus6,
       platform: 'Web Application',
+      platformImage: artus7,
       timeline: 'Jan 2024 – Mar 2025',
+      timelineImage: artus8,
       role: 'Led end-to-end product design including UX strategy, information architecture, interaction design, and design system development. Collaborated closely with founders and engineers to shape the AI-driven product workflow.',
+      roleImage: artus9,
       team: ['2 Founder', '2 Product Designer', '2 Engineers'],
+      teamImage: artus10,
       skills: [
         'Product Design',
         'AI UX',
@@ -127,9 +151,12 @@ export const projectDetails = {
         'Prototyping',
         'User Flows',
       ],
+      skillsImage: artus11,
       impact:
         'Helped transform early-stage concepts into a structured AI-powered product development platform used by product teams to accelerate planning and execution.',
+      impactImage: artus12
     },
+    flowerImage: artus13,
     introduction: [
       'Product teams today rely on multiple disconnected tools for research, documentation, planning, and execution. This fragmentation slows down innovation and creates friction between ideation and delivery.',
       'Artus was designed as a unified AI-powered workspace where teams can collaborate with specialized agents to move seamlessly from product ideas to actionable execution plans.',
@@ -157,8 +184,12 @@ export const projectDetails = {
         'Build execution-ready plans',
         'Move seamlessly from ideation to delivery',
       ],
+      tickImage: artus14
     },
     redesign: {
+      percentImage: artus15,
+      crossImage: artus16,
+      tickImage: artus17,
       before: {
         title: 'EARLIER EXPERIENCE — WHAT WAS WRONG?',
         points: [
@@ -183,6 +214,7 @@ export const projectDetails = {
       },
     },
     outcome: {
+      titleImage: artus18,
       title: 'FINAL OUTCOME',
       description:
         'The final experience transformed AI from a simple assistant into a collaborative product-building partner.',
@@ -197,10 +229,10 @@ export const projectDetails = {
     takeaway: {
       text: 'The biggest challenge was creating an experience where advanced AI capabilities felt understandable, predictable, and actionable. By focusing on guided workflows instead of overwhelming users with options, Artus helps teams move from ideas to execution with greater confidence and speed.',
       steps: [
-        'Understand User Needs',
-        'Simplify Complexity',
-        'Guide with AI Agents',
-        'Enable Actions',
+        {value: 'Understand User Needs', icon: artus19},
+        {value: 'Simplify Complexity', icon: artus20},
+        {value: 'Guide with AI Agents', icon: artus21},
+        {value: 'Enable Actions', icon: artus22}
       ],
     },
   },

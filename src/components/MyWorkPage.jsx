@@ -76,7 +76,7 @@ const CountHolder = styled.div`
   font-weight: 600;
   color: ${props => props.theme.text};
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: center;
   gap: 0.5rem;
@@ -106,7 +106,7 @@ const HeaderRight = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-bottom: 2rem;
+  margin: 0rem 2rem 0rem 0rem;
 `
 const SectionLabel = styled.span`
   display: block;
@@ -306,19 +306,13 @@ const MyWorkPage = () => {
         <PageContent>
             <HeaderSection>
                 <HeaderLeft>
-                    <SectionLabel>Selected Work —</SectionLabel>
-                    <PageTitle>Case Studies &amp; Projects .</PageTitle>
-                    <Subheading>
+                    <PageTitle>Case Studies &amp; Projects</PageTitle>
+                    {/* <Subheading>
                         A collection of selected projects where I led the design process from
                         problem solving to final product.
-                    </Subheading>
+                    </Subheading> */}
                 </HeaderLeft>
-                <HeaderRight>
-                    <ProjectCount>
-                        <PointerHolder></PointerHolder>
-                        <CountHolder>{countLabel} <span>Projects</span></CountHolder> 
-                    </ProjectCount>
-                </HeaderRight>
+                
             </HeaderSection>
             <FilterRow>
                 <TabGroup>
@@ -334,15 +328,12 @@ const MyWorkPage = () => {
                 ))}
                 </TabGroup>
                 
-                {/* <SortWrapper>
-                    <SortSelect
-                        value={sortOrder}
-                        onChange={(e) => setSortOrder(e.target.value)}
-                    >
-                        <option value="featured">Featured First</option>
-                        <option value="alphabetical">A–Z</option>
-                    </SortSelect>
-                </SortWrapper> */}
+                <HeaderRight>
+                    <ProjectCount>
+                        <PointerHolder></PointerHolder>
+                        <CountHolder>{countLabel} <span>Projects</span></CountHolder> 
+                    </ProjectCount>
+                </HeaderRight>  
             </FilterRow>
 
             <CardList

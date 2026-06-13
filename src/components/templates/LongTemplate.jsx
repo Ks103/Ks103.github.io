@@ -29,8 +29,6 @@ const HeroLabel = styled.span`
   font-family: 'Karla', sans-serif;
   font-size: 1rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   margin-bottom: 0.3rem;
 `
 
@@ -100,8 +98,8 @@ const HeroImage = styled.div`
 
   img {
     width: 100%;
-    max-width: 420px;
-    max-height: 350px;
+    max-width: 500px;
+    max-height: 300px;
     object-fit: contain;
   }
 `
@@ -118,8 +116,6 @@ const ImagePlaceholder = styled.div`
   font-family: 'Karla', sans-serif;
   font-size: 0.8rem;
   opacity: 0.35;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 `
 
 const Card = styled.section`
@@ -141,52 +137,54 @@ const OverviewGrid = styled.div`
 `
 
 const SidebarTitle = styled.h3`
-  font-family: 'Karla', sans-serif;
-  font-size: 0.7rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  img{
+    max-width: 24px;
+    max-height: 24px;
+  }
 `
 
 const MetaBlock = styled.div`
   margin-bottom: 1.25rem;
-
-  h4 {
-    font-family: 'Karla', sans-serif;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.5;
-    margin-bottom: 0.35rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
+  display: flex;
+  img{
+    max-width: 24px;
+    max-height: 24px;
   }
-
-  p,
-  li {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.82rem;
-    line-height: 1.5;
+  p{
+    font-size: 0.8rem;  
+    opacity: 0.75;
   }
-
+  gap: 1rem;
+`
+const BlockItemRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  span{
+    font-size: 1rem;
+    font-weight: 500;
+  }
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    li {
+      list-style: none;
+      opacity: 0.75;
+      font-size: 0.8rem;  
+    }
   }
 `
-
 const SectionTitle = styled.h3`
   font-family: 'Karla', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
   display: flex;
@@ -196,9 +194,9 @@ const SectionTitle = styled.h3`
 
 const BodyText = styled.p`
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   line-height: 1.65;
-  opacity: 0.8;
+  opacity: 0.75;
   margin-bottom: 0.75rem;
 `
 
@@ -209,9 +207,9 @@ const BulletList = styled.ul`
 
   li {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.6;
-    opacity: 0.8;
+    opacity: 0.75;
     margin-bottom: 0.35rem;
   }
 `
@@ -225,7 +223,6 @@ const Divider = styled.hr`
 const CheckGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.6rem 2rem;
   margin-top: 0.75rem;
 
   @media (max-width: 600px) {
@@ -235,25 +232,16 @@ const CheckGrid = styled.div`
 
 const CheckItem = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.5rem;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   line-height: 1.5;
-  opacity: 0.8;
-
-  &::before {
-    content: '✓';
-    flex-shrink: 0;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 1.5px solid ${props => props.theme.text};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.6rem;
-    margin-top: 2px;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+  img {
+    width: 12px;
+    height: 12px;
   }
 `
 
@@ -274,15 +262,17 @@ const CompareCard = styled(Card)`
 `
 
 const CompareTitle = styled.h3`
-  font-family: 'Karla', sans-serif;
-  font-size: 0.68rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  img{
+    height: 24px;
+    width: 24px;
+  }
 `
 
 const CompareBody = styled.div`
@@ -309,7 +299,12 @@ const CompareList = styled.ul`
     font-size: 0.8rem;
     line-height: 1.5;
     margin-bottom: 0.6rem;
-    opacity: 0.8;
+    opacity: 0.75;
+    img{
+      height: 16px;
+      width: 16px;
+      margin-top: 0.2rem;
+    }
   }
 `
 
@@ -318,7 +313,6 @@ const CompareThumb = styled.div`
   min-height: 120px;
   max-width: 200px;
   max-height: 200px;
-  border: 1px dashed rgba(0, 0, 0, 0.12);
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -368,25 +362,15 @@ const OutcomeTitle = styled.h3`
   display: flex;
   align-items: center;
   gap: 0.6rem;
-
-  font-family: 'Karla', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 1rem;
-
-  span {
-    font-size: 1rem;
-  }
 `;
 
 const OutcomeDescription = styled.p`
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 0.8rem;
+  line-height: 1.5;
   opacity: 0.75;
   margin: 0;
 `;
@@ -432,10 +416,8 @@ const Metric = styled.div`
   }
 
   span {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     line-height: 1.5;
-
     opacity: 0.75;
   }
 
@@ -495,19 +477,15 @@ const BulbIcon = styled.div`
 
 const TakeawayText = styled.div`
   h3 {
-    font-family: 'Karla', sans-serif;
-    font-size: 1rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
   }
 
   p {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.85rem;
-    line-height: 1.65;
-    opacity: 0.8;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    opacity: 0.75;
   }
 `
 
@@ -547,15 +525,18 @@ const Step = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 0.85rem;
+    img{
+      width: 16px;
+      height: 16px;
+    }
   }
 
   span {
-    font-family: 'Karla', sans-serif;
-    font-size: 0.62rem;
-    font-weight: 500;
     text-align: center;
-    line-height: 1.3;
     max-width: 90px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    opacity: 0.75;
   }
 `
 const BackLink = styled(Link)`
@@ -604,6 +585,7 @@ const LongTemplate = ({ data }) => {
   const {
     hero,
     overview,
+    flowerImage,
     introduction,
     problemStatement,
     solution,
@@ -656,54 +638,81 @@ const LongTemplate = ({ data }) => {
       <Card>
         <OverviewGrid>
           <aside>
-            <SidebarTitle>▦ PROJECT OVERVIEW</SidebarTitle>
+            <SidebarTitle><img src={overview.headingImage}></img> PROJECT OVERVIEW</SidebarTitle>
             <MetaBlock>
-              <h4>⊞ PRODUCT</h4>
-              <p>{overview.product}</p>
+              <img src={overview.productImage} alt="Product" />
+              <BlockItemRight>
+                <span>PRODUCT</span>
+                <p>{overview.product}</p>
+              </BlockItemRight>
             </MetaBlock>
+
             <MetaBlock>
-              <h4>🖥 PLATFORM</h4>
-              <p>{overview.platform}</p>
+              <img src={overview.platformImage} alt="Platform" />
+              <BlockItemRight>
+                <span>PLATFORM</span>
+                <p>{overview.platform}</p>
+              </BlockItemRight>
             </MetaBlock>
+
             <MetaBlock>
-              <h4>📅 TIMELINE</h4>
-              <p>{overview.timeline}</p>
+              <img src={overview.timelineImage} alt="Timeline" />
+              <BlockItemRight>
+                <span>TIMELINE</span>
+                <p>{overview.timeline}</p>
+              </BlockItemRight>
             </MetaBlock>
+
             <MetaBlock>
-              <h4>▣ MY ROLE</h4>
-              <p>{overview.role}</p>
+              <img src={overview.roleImage} alt="My Role" />
+              <BlockItemRight>
+                <span>MY ROLE</span>
+                <p>{overview.role}</p>
+              </BlockItemRight>
             </MetaBlock>
+
             <MetaBlock>
-              <h4>👤 TEAM</h4>
-              <ul>
-                {overview.team.map(item => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <img src={overview.teamImage} alt="Team" />
+              <BlockItemRight>
+                <span>TEAM</span>
+                <ul>
+                  {overview.team.map(item => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </BlockItemRight>
             </MetaBlock>
+
             <MetaBlock>
-              <h4>✦ SKILLS</h4>
-              <ul>
-                {overview.skills.map(item => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <img src={overview.skillsImage} alt="Skills" />
+              <BlockItemRight>
+                <span>SKILLS</span>
+                <ul>
+                  {overview.skills.map(item => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </BlockItemRight>
             </MetaBlock>
+
             <MetaBlock>
-              <h4>📊 IMPACT</h4>
-              <p>{overview.impact}</p>
+              <img src={overview.impactImage} alt="Impact" />
+              <BlockItemRight>
+                <span>IMPACT</span>
+                <p>{overview.impact}</p>
+              </BlockItemRight>
             </MetaBlock>
           </aside>
 
           <div>
-            <SectionTitle>✿ INTRODUCTION</SectionTitle>
+            <SidebarTitle><img src={flowerImage}></img> INTRODUCTION</SidebarTitle>
             {introduction.map((para, i) => (
               <BodyText key={i}>{para}</BodyText>
             ))}
 
             <Divider />
 
-            <SectionTitle>✿ PROBLEM STATEMENT</SectionTitle>
+            <SidebarTitle><img src={flowerImage}></img>PROBLEM STATEMENT</SidebarTitle>
             <BodyText>{problemStatement.intro}</BodyText>
             <BulletList>
               {problemStatement.points.map(point => (
@@ -714,17 +723,23 @@ const LongTemplate = ({ data }) => {
 
             <Divider />
 
-            <SectionTitle>✿ THE SOLUTION</SectionTitle>
+            <SidebarTitle><img src={flowerImage}></img>THE SOLUTION</SidebarTitle>
             <BodyText>{solution.intro}</BodyText>
             <CheckGrid>
               <div>
                 {solutionLeft.map(point => (
-                  <CheckItem key={point}>{point}</CheckItem>
+                  <CheckItem key={point}>
+                    <img src={solution.tickImage} alt="" />
+                    <span>{point}</span>
+                  </CheckItem>
                 ))}
               </div>
               <div>
                 {solutionRight.map(point => (
-                  <CheckItem key={point}>{point}</CheckItem>
+                  <CheckItem key={point}>
+                    <img src={solution.tickImage} alt="" />
+                    <span>{point}</span>
+                  </CheckItem>
                 ))}
               </div>
             </CheckGrid>
@@ -734,12 +749,12 @@ const LongTemplate = ({ data }) => {
 
       <CompareGrid>
         <CompareCard>
-          <CompareTitle>% {redesign.before.title}</CompareTitle>
+          <CompareTitle><img src={redesign.percentImage}></img> {redesign.before.title}</CompareTitle>
           <CompareBody>
             <CompareList>
               {redesign.before.points.map(point => (
                 <li key={point}>
-                  <span>{listIcon('before')}</span>
+                  <img src={redesign.crossImage}></img>
                   {point}
                 </li>
               ))}
@@ -755,12 +770,12 @@ const LongTemplate = ({ data }) => {
         </CompareCard>
 
         <CompareCard>
-          <CompareTitle>% {redesign.after.title}</CompareTitle>
+          <CompareTitle><img src={redesign.percentImage}></img> {redesign.after.title}</CompareTitle>
           <CompareBody>
             <CompareList>
               {redesign.after.points.map(point => (
                 <li key={point}>
-                  <span>{listIcon('after')}</span>
+                  <img src={redesign.tickImage}></img>
                   {point}
                 </li>
               ))}
@@ -779,7 +794,7 @@ const LongTemplate = ({ data }) => {
       <OutcomeCard>
         <OutcomeInfo>
           <OutcomeTitle>
-            <span>🏆</span>
+            <img src={outcome.titleImage}></img>
             {outcome.title}
           </OutcomeTitle>
 
@@ -815,9 +830,9 @@ const LongTemplate = ({ data }) => {
         </TakeawayLeft>
         <StepsRow>
           {takeaway.steps.map((step, i) => (
-            <Step key={step}>
-              <div>{stepIcons[i]}</div>
-              <span>{step}</span>
+            <Step key={step.value}>
+              <div><img src={step.icon}></img></div>
+              <span>{step.value}</span>
             </Step>
           ))}
         </StepsRow>

@@ -9,18 +9,37 @@ const Card = styled(Link)`
   border-radius: 12px;
   background-color: ${props => props.theme.body};
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 48%;
   text-decoration: none;
 
+  transition: transform 0.25s ease,
+              border-color 0.25s ease;
+
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: #000000;
   }
 
   @media (max-width: 900px) {
     flex-direction: column;
   }
+`;
+
+const Glow = styled.div`
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  background: radial-gradient(
+    350px circle at var(--x) var(--y),
+    rgba(255, 180, 140, 0.25),
+    rgba(255, 180, 140, 0.08) 30%,
+    transparent 65%
+  );
 `;
 
 const NumberBadge = styled.span`
@@ -55,13 +74,18 @@ const DotGrid = styled.div`
 `
 
 const Content = styled.div`
+  position: relative;
+  z-index: 1;
+
   flex: 1;
   padding: 2.5rem 2rem 2rem;
+
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+
   min-width: 0;
-`
+`;
 
 const Category = styled.span`
   font-family: 'Karla', sans-serif;
@@ -97,6 +121,7 @@ const Tags = styled.div`
 `
 
 const Tag = styled.span`
+  color: black;
   font-family: 'Karla', sans-serif;
   font-size: 0.7rem;
   font-weight: 500;
@@ -176,10 +201,34 @@ const Placeholder = styled.span`
 
 const WorkProjectCard = ({ project, activeTab }) => {
   const { id, number, categoryLabel, title, description, tags, image } = project
-
+  const handleMouseMove = e => {
+    const rect = e.currentTarget.getBoundingClientRect();
+  
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+  
+    e.currentTarget.style.setProperty('--x', `${x}px`);
+    e.currentTarget.style.setProperty('--y', `${y}px`);
+  };
+  
+  const handleMouseEnter = e => {
+    const glow = e.currentTarget.querySelector('.glow');
+    glow.style.opacity = '1';
+  };
+  
+  const handleMouseLeave = e => {
+    const glow = e.currentTarget.querySelector('.glow');
+    glow.style.opacity = '0';
+  };
   return (
-    <Card to={`/mywork/${id}`}>
+    <Card
+        to={`/mywork/${id}`}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
       {/* <NumberBadge>{number}</NumberBadge> */}
+      <Glow className="glow" />
       <DotGrid>
         {Array.from({ length: 9 }).map((_, i) => (
           <span key={i} />

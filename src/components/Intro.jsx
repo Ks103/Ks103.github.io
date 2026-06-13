@@ -6,7 +6,7 @@ import Me from '../assets/Images/p2.png'
 const helloText = 'Hello...';
 const roleText = "I'm Khushi Product Designer";
 const descText =
-  'I specialize in turning in intractable business problems into clear, measurable impact';
+  'I specialize in turning intractable business problems into clear, measurable impact';
 
 const Box = styled(motion.div)`
 
