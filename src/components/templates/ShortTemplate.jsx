@@ -624,12 +624,13 @@ const ShortTemplate = ({ data }) => {
         </ProcessSection>
       </Card>
 
-      <Card>
-        <FeaturesSection>
-          <SectionHeading>04 KEY FEATURES &amp; SOLUTIONS</SectionHeading>
-          <FeaturesGrid>
-            {features.map(feature => (
-              <FeatureCol key={feature.title}>
+      {features && (
+        <Card>
+          <FeaturesSection>
+            <SectionHeading>04 KEY FEATURES &amp; SOLUTIONS</SectionHeading>
+            <FeaturesGrid>
+              {features.map(feature => (
+                <FeatureCol key={feature.title}>
                 <h4>{feature.title}</h4>
                 <p>{feature.description}</p>
                 <FeatureMockup>
@@ -644,6 +645,7 @@ const ShortTemplate = ({ data }) => {
           </FeaturesGrid>
         </FeaturesSection>
       </Card>
+      )}
     </Page>
   )
 }

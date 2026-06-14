@@ -3,8 +3,8 @@ export const projects = [
   {
     id: 1,
     number: '01',
-    category: 'case-study',
-    categoryLabel: 'CASE STUDY',
+    category: 'other',
+    categoryLabel: 'Project',
     title: 'Litebite',
     description:
       'A mobile app that helps users track meals and calories with AI-powered food recognition and personalized health insights.',
@@ -41,9 +41,9 @@ export const projects = [
     number: '04',
     category: 'case-study',
     categoryLabel: 'CASE STUDY',
-    title: 'TMS Portal Enhancement',
+    title: 'Customer HYP Enhancement',
     description:
-      'An enterprise transport management platform redesigned to improve operational visibility, streamline workflows, and simplify daily logistics management for transport teams.',
+      'Designed scalable customer dashboard experiences for hyperlocal logistics operations, enabling better visibility, faster actions, and improved operational efficiency.',
     tags: ['UX Audit', 'Dashboard', 'Saas', 'Logistics'],
     featured: 4,
     template: 'long'
@@ -52,8 +52,8 @@ export const projects = [
     id: 5,
     number: '05',
     category: 'other',
-    categoryLabel: 'OTHER PROJECT',
-    title: 'ApnaSchool',
+    categoryLabel: 'Project',
+    title: 'Ownschool',
     description:
       'An EdTech mobile application connecting students with learning resources, progress tracking, and interactive study tools.',
     tags: ['Mobile App', 'EdTech', 'UI/UX'],
@@ -64,7 +64,7 @@ export const projects = [
     id: 6,
     number: '06',
     category: 'other',
-    categoryLabel: 'OTHER PROJECT',
+    categoryLabel: 'Project',
     title: 'Vlieg Engineering',
     description:
       'An engineering automation platform that transforms complex calculations and manual workflows into streamlined digital processes, helping teams improve speed, accuracy, and operational efficiency.',
@@ -76,7 +76,7 @@ export const projects = [
     id: 7,
     number: '07',
     category: 'other',
-    categoryLabel: 'OTHER PROJECT',
+    categoryLabel: 'Project',
     title: 'Boansel',
     description:
       'A web-based AI SaaS product designed for seamless content creation with an intuitive interface and smart automation.',
@@ -88,7 +88,7 @@ export const projects = [
     id: 8,
     number: '08',
     category: 'other',
-    categoryLabel: 'OTHER PROJECT',
+    categoryLabel: 'Project',
     title: 'Reqbeam',
     description:
       'An open-source, Docker-first API testing platform designed for developers to create, test, and manage APIs efficiently with a lightweight, self-hosted workflow.',

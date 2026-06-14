@@ -622,9 +622,11 @@ const LongTemplate = ({ data }) => {
               <Tag key={tag}>{tag}</Tag>
             ))}
           </TagRow>
-          <CtaButton href={hero.ctaLink} target="_blank" rel="noreferrer">
-            {hero.ctaLabel} →
-          </CtaButton>
+          {hero.ctaLink && (
+            <CtaButton href={hero.ctaLink} target="_blank" rel="noreferrer">
+              {hero.ctaLabel} →
+            </CtaButton>
+          )}
         </div>
         <HeroImage>
           {hero.image ? (
@@ -747,49 +749,61 @@ const LongTemplate = ({ data }) => {
         </OverviewGrid>
       </Card>
 
-      <CompareGrid>
-        <CompareCard>
-          <CompareTitle><img src={redesign.percentImage}></img> {redesign.before.title}</CompareTitle>
-          <CompareBody>
-            <CompareList>
-              {redesign.before.points.map(point => (
-                <li key={point}>
-                  <img src={redesign.crossImage}></img>
-                  {point}
-                </li>
-              ))}
-            </CompareList>
-            <CompareThumb>
-              {redesign.before.image ? (
-                <img src={redesign.before.image} alt="Before" />
-              ) : (
-                'UI Preview'
-              )}
-            </CompareThumb>
-          </CompareBody>
-        </CompareCard>
+      {redesign && (
+        <CompareGrid>
+          <CompareCard>
+            <CompareTitle>
+              <img src={redesign.percentImage} alt="" />
+              {redesign.before.title}
+            </CompareTitle>
 
-        <CompareCard>
-          <CompareTitle><img src={redesign.percentImage}></img> {redesign.after.title}</CompareTitle>
-          <CompareBody>
-            <CompareList>
-              {redesign.after.points.map(point => (
-                <li key={point}>
-                  <img src={redesign.tickImage}></img>
-                  {point}
-                </li>
-              ))}
-            </CompareList>
-            <CompareThumb>
-              {redesign.after.image ? (
-                <img src={redesign.after.image} alt="After" />
-              ) : (
-                'UI Preview'
-              )}
-            </CompareThumb>
-          </CompareBody>
-        </CompareCard>
-      </CompareGrid>
+            <CompareBody>
+              <CompareList>
+                {redesign.before.points.map((point) => (
+                  <li key={point}>
+                    <img src={redesign.crossImage} alt="" />
+                    {point}
+                  </li>
+                ))}
+              </CompareList>
+
+              <CompareThumb>
+                {redesign.before.image ? (
+                  <img src={redesign.before.image} alt="Before" />
+                ) : (
+                  'UI Preview'
+                )}
+              </CompareThumb>
+            </CompareBody>
+          </CompareCard>
+
+          <CompareCard>
+            <CompareTitle>
+              <img src={redesign.percentImage} alt="" />
+              {redesign.after.title}
+            </CompareTitle>
+
+            <CompareBody>
+              <CompareList>
+                {redesign.after.points.map((point) => (
+                  <li key={point}>
+                    <img src={redesign.tickImage} alt="" />
+                    {point}
+                  </li>
+                ))}
+              </CompareList>
+
+              <CompareThumb>
+                {redesign.after.image ? (
+                  <img src={redesign.after.image} alt="After" />
+                ) : (
+                  'UI Preview'
+                )}
+              </CompareThumb>
+            </CompareBody>
+          </CompareCard>
+        </CompareGrid>
+      )}
 
       <OutcomeCard>
         <OutcomeInfo>

@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 import Me from '../assets/Images/p2.png'
 
 const helloText = 'Hello...';
-const roleText = "I'm Khushi Product Designer";
+const roleText = "I'm Khushi | Product Designer";
 const descText =
   'I specialize in turning intractable business problems into clear, measurable impact';
 

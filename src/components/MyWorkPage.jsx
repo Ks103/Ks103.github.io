@@ -14,7 +14,7 @@ import WorkProjectCard from '../subComponents/WorkProjectCard'
 const TABS = [
   { id: 'all', label: 'All Projects' },
   { id: 'case-study', label: 'Case Studies' },
-  { id: 'other', label: 'Other Projects' },
+  { id: 'other', label: 'Projects' },
 ]
 
 const Box = styled.div`
