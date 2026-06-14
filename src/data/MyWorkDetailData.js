@@ -55,13 +55,13 @@ import before from '../assets/Images/Transporter/before.svg';
 import after from '../assets/Images/Transporter/after.svg';
 import hypside from '../assets/Images/HYP/hypside.svg';
 import mainsvg from '../assets/Images/wms/main.svg';
-import rodlymain from '../assets/Images/Rodly/rodlymain.svg';
-import rodlylogo from '../assets/Images/Rodly/rodlylogo.svg';
+// import rodlymain from '../assets/Images/Rodly/rodlymain.svg';
+// import rodlylogo from '../assets/Images/Rodly/rodlylogo.svg';
 import rodly1 from '../assets/Images/Rodly/image1.svg';
-import rodly2 from '../assets/Images/Rodly/image2.svg';
+// import rodly2 from '../assets/Images/Rodly/image2.svg';
 import rodly3 from '../assets/Images/Rodly/image3.svg';
-import rodly4 from '../assets/Images/Rodly/image4.svg';
-import rodly5 from '../assets/Images/Rodly/image5.svg';
+// import rodly4 from '../assets/Images/Rodly/image4.svg';
+// import rodly5 from '../assets/Images/Rodly/image5.svg';
 import reqlogo from '../assets/Images/ReqBeam/reqlogo.svg';
 import reqmain from '../assets/Images/ReqBeam/reqmain.svg';
 import ownmain from '../assets/Images/ownschool/ownmain.svg';
@@ -629,705 +629,702 @@ export const projectDetails = {
       ],
     },
   },
-  6: {template: 'short',
-
-hero: {
-  label: 'Project',
-  brand: 'Vlieg Engineering',
-  subtitle: 'Engineering Process Automation Platform',
-  description:
-    'A modern engineering software platform designed to automate complex workflows, improve operational efficiency, and provide teams with greater visibility and control.',
-  tags: [
-    'Web App',
-    'Enterprise Software',
-    'Engineering',
-    'Automation',
-    'Design System',
-  ],
-  ctaLabel: 'View Project',
-  ctaLink: 'https://www.figma.com/community/file/1646066498037055533',
-  image: rodlymain,
-  logo: rodlylogo,
-  images: null,
-},
-
-overview: {
-  role: 'Product Designer (End-to-End)',
-  roleImg: litebite2,
-
-  timeline: '2024',
-  timelineImg: litebite3,
-
-  platform: 'Web Application',
-  platformImg: litebite4,
-
-  tools: ['Figma', 'FigJam', 'Design System'],
-  toolsImg: litebite5,
-},
-
-problem: {
-  description:
-    'Engineering teams often rely on fragmented tools and manual processes, resulting in inefficiencies, reduced visibility, and inconsistent execution.',
-  points: [
-    'Complex engineering workflows',
-    'Manual and repetitive operational tasks',
-    'Limited process visibility',
-    'Scattered project information',
-    'Lack of design consistency across modules',
-  ],
-  pointImg: litebite6,
-},
-
-goal: {
-  description:
-    'Create a scalable platform and design system that simplifies engineering operations while improving efficiency, consistency, and user experience.',
-  cards: [
-    {
-      image: litebite7,
-      title: 'Process',
-      subtitle: 'Automation',
-    },
-    {
-      image: litebite8,
-      title: 'Operational',
-      subtitle: 'Visibility',
-    },
-    {
-      image: litebite9,
-      title: 'Engineering',
-      subtitle: 'Workflows',
-    },
-    {
-      image: litebite10,
-      title: 'Scalable',
-      subtitle: 'Design System',
-    },
-    {
-      image: litebite11,
-      title: 'Team',
-      subtitle: 'Efficiency',
-    },
-    {
-      image: litebite12,
-      title: 'Data-Driven',
-      subtitle: 'Decisions',
-    },
-  ],
-},
-
-process: [
-  {
-    title: 'Discover',
-    description: 'Stakeholder interviews, workflow analysis & product understanding',
-    image: litebite13,
-  },
-  {
-    title: 'Define',
-    description: 'User needs, process gaps & business objectives',
-    image: litebite14,
-  },
-  {
-    title: 'Structure',
-    description: 'Information architecture, flows & dashboard planning',
-    image: litebite15,
-  },
-  {
-    title: 'Design',
-    description: 'Design system, components & enterprise interfaces',
-    image: litebite16,
-  },
-  {
-    title: 'Validate',
-    description: 'Feedback loops, reviews & iterative improvements',
-    image: litebite17,
-  },
-  {
-    title: 'Deliver',
-    description: 'Developer handoff & scalable design documentation',
-    image: litebite18,
-  },
-],
-
-features: [
-  {
-    title: 'Workflow Automation',
-    description:
-      'Automates repetitive engineering processes to reduce manual effort and improve operational speed.',
-    image: rodly1,
-  },
-  {
-    title: 'Centralized Operations',
-    description:
-      'Provides a unified workspace for monitoring projects, workflows, and engineering activities.',
-    image: rodly2,
-  },
-  {
-    title: 'Analytics & Insights',
-    description:
-      'Transforms operational data into actionable insights for better decision-making.',
-    image: rodly3,
-  },
-  {
-    title: 'Design System',
-    description:
-      'Built a scalable design system to ensure consistency, faster development, and reusable patterns.',
-    image: rodly4,
-  },
-  {
-    title: 'Enterprise Experience',
-    description:
-      'Designed intuitive interfaces that simplify complex engineering workflows without sacrificing functionality.',
-    image: rodly5,
-  },
-],
-},
-8: {template: 'short',
-
-hero: {
-  label: 'Project',
-  brand: 'ReqBeam',
-  subtitle: 'Open-Source Docker-First API Testing Platform',
-  description:
-    'A modern API testing platform that enables developers to build, mock, test, document, and automate APIs through a unified web and CLI experience.',
-  tags: [
-    'Developer Tools',
-    'API Testing',
-    'Open Source',
-    'Docker',
-    'SaaS',
-  ],
-  ctaLabel: 'View Project',
-  ctaLink: 'https://www.figma.com/community/file/1646061362516933631',
-  image: reqmain,
-  logo: reqlogo,
-  images: null,
-},
-
-overview: {
-  role: 'Product Designer (End-to-End)',
-  roleImg: litebite2,
-
-  timeline: '2025',
-  timelineImg: litebite3,
-
-  platform: 'Web Application',
-  platformImg: litebite4,
-
-  tools: ['Figma', 'FigJam'],
-  toolsImg: litebite5,
-},
-
-problem: {
-  description:
-    'Developers often rely on multiple disconnected tools for API testing, mocking, documentation, and automation, leading to fragmented workflows and reduced productivity.',
-  points: [
-    'Switching between multiple API tools',
-    'Complex onboarding and setup processes',
-    'Lack of centralized API lifecycle management',
-    'Difficulty collaborating across teams',
-    'Manual testing and repetitive workflows',
-  ],
-  pointImg: litebite6,
-},
-
-goal: {
-  description:
-    'Design a developer-first platform that simplifies API development, testing, and automation while reducing complexity and improving workflow efficiency.',
-  cards: [
-    {
-      image: litebite7,
-      title: 'API',
-      subtitle: 'Testing',
-    },
-    {
-      image: litebite8,
-      title: 'Mock',
-      subtitle: 'Services',
-    },
-    {
-      image: litebite9,
-      title: 'Docker',
-      subtitle: 'First',
-    },
-    {
-      image: litebite10,
-      title: 'CLI + Web',
-      subtitle: 'Experience',
-    },
-    {
-      image: litebite11,
-      title: 'Team',
-      subtitle: 'Collaboration',
-    },
-    {
-      image: litebite12,
-      title: 'Automation',
-      subtitle: 'Workflows',
-    },
-  ],
-},
-
-process: [
-  {
-    title: 'Discover',
-    description: 'Developer interviews, workflow analysis & competitor research',
-    image: litebite13,
-  },
-  {
-    title: 'Define',
-    description: 'User needs, pain points & product requirements',
-    image: litebite14,
-  },
-  {
-    title: 'Architect',
-    description: 'Information architecture, navigation & user flows',
-    image: litebite15,
-  },
-  {
-    title: 'Design',
-    description: 'Wireframes, UI design system & prototypes',
-    image: litebite16,
-  },
-  {
-    title: 'Validate',
-    description: 'Usability reviews, feedback & iterations',
-    image: litebite17,
-  },
-  {
-    title: 'Deliver',
-    description: 'Design handoff, documentation & implementation support',
-    image: litebite18,
-  },
-],
-
-
-},
-5: {
-  template: 'short',
-
-hero: {
-  label: 'Project',
-  brand: 'Ownschool',
-  subtitle: 'School Management Platform',
-  description:
-    'A comprehensive school management platform designed for students, teachers, and parents to streamline academics, communication, attendance, and daily school operations.',
-  tags: [
-    'EdTech',
-    'School ERP',
-    'Mobile App',
-    'Dashboard',
-    'UX/UI Design',
-  ],
-  ctaLabel: 'View Project',
-  ctaLink: 'https://www.figma.com/community/file/1587728008984342745',
-  image: ownmain,
-  logo: ownlogo,
-  images: null,
-},
-
-overview: {
-  role: 'Product Designer (End-to-End)',
-  roleImg: litebite2,
-
-  timeline: '2025',
-  timelineImg: litebite3,
-
-  platform: 'Web & Mobile Application',
-  platformImg: litebite4,
-
-  tools: ['Figma', 'FigJam', 'Notion', 'Prototype'],
-  toolsImg: litebite5,
-},
-
-problem: {
-  description:
-    'Schools often rely on fragmented systems for attendance, assignments, communication, and academic tracking, creating inefficiencies for teachers, students, and parents.',
-  points: [
-    'Scattered academic information',
-    'Manual attendance and assignment tracking',
-    'Limited parent-school communication',
-    'Difficulty monitoring student performance',
-    'Complex administrative workflows',
-  ],
-  pointImg: litebite6,
-},
-
-goal: {
-  description:
-    'Create a unified school platform that simplifies academic management while providing role-based experiences for students, teachers, parents, and administrators.',
-  cards: [
-    {
-      image: litebite7,
-      title: 'Student',
-      subtitle: 'Dashboard',
-    },
-    {
-      image: litebite8,
-      title: 'Teacher',
-      subtitle: 'Management',
-    },
-    {
-      image: litebite9,
-      title: 'Parent',
-      subtitle: 'Portal',
-    },
-    {
-      image: litebite10,
-      title: 'Attendance',
-      subtitle: 'Tracking',
-    },
-    {
-      image: litebite11,
-      title: 'Assignments',
-      subtitle: 'Management',
-    },
-    {
-      image: litebite12,
-      title: 'School',
-      subtitle: 'Communication',
-    },
-  ],
-},
-
-process: [
-  {
-    title: 'Discover',
-    description: 'School workflow research, stakeholder interviews & competitor analysis',
-    image: litebite13,
-  },
-  {
-    title: 'Define',
-    description: 'User journeys, personas & academic workflows',
-    image: litebite14,
-  },
-  {
-    title: 'Architect',
-    description: 'Role-based navigation, user flows & information architecture',
-    image: litebite15,
-  },
-  {
-    title: 'Design',
-    description: 'Wireframes, dashboard experiences & prototypes',
-    image: litebite16,
-  },
-  {
-    title: 'Validate',
-    description: 'Usability testing and workflow improvements',
-    image: litebite17,
-  },
-  {
-    title: 'Deliver',
-    description: 'Design system, handoff & implementation support',
-    image: litebite18,
-  },
-],
-
-features: [
-  {
-    title: 'Role-Based Experience',
-    description:
-      'Dedicated experiences for students, teachers, parents, and administrators based on their responsibilities.',
-    image: own1,
-  },
-  {
-    title: 'Attendance Management',
-    description:
-      'Track student attendance digitally with real-time updates and reporting.',
-    image: own2,
-  },
-  {
-    title: 'Assignments & Homework',
-    description:
-      'Manage assignments, submissions, deadlines, and academic tasks from a centralized workspace.',
-    image: own3,
-  },
-  {
-    title: 'Academic Progress Tracking',
-    description:
-      'Monitor grades, performance, examinations, and overall student growth through visual dashboards.',
-    image: own4,
-  },
-  {
-    title: 'Parent Communication Hub',
-    description:
-      'Enable seamless communication between parents, teachers, and schools through notifications and updates.',
-    image: own5,
-  },
-],
-},
-7: {
-  template: 'short',
-
+  5: {
+    template: 'short',
+  
   hero: {
     label: 'Project',
-    brand: 'Boansel',
-    subtitle: 'Mentorship & Professional Networking Platform',
+    brand: 'Ownschool',
+    subtitle: 'School Management Platform',
     description:
-      'A platform that connects learners with industry experts through mentorship, consultations, portfolio reviews, and career guidance while helping professionals monetize their knowledge.',
+      'A comprehensive school management platform designed for students, teachers, and parents to streamline academics, communication, attendance, and daily school operations.',
     tags: [
-      'Mentorship',
-      'Creator Economy',
-      'Career Growth',
-      'Marketplace',
-      'SaaS',
+      'EdTech',
+      'School ERP',
+      'Mobile App',
+      'Dashboard',
+      'UX/UI Design',
     ],
     ctaLabel: 'View Project',
-    ctaLink: 'https://www.figma.com/@khushishroff',
-    image: bonmain,
-    logo: bonlogo,
+    ctaLink: 'https://www.figma.com/community/file/1587728008984342745',
+    image: ownmain,
+    logo: ownlogo,
     images: null,
   },
-
+  
   overview: {
     role: 'Product Designer (End-to-End)',
     roleImg: litebite2,
-
+  
     timeline: '2025',
     timelineImg: litebite3,
-
-    platform: 'Web Application',
+  
+    platform: 'Web & Mobile Application',
     platformImg: litebite4,
-
+  
     tools: ['Figma', 'FigJam', 'Notion', 'Prototype'],
     toolsImg: litebite5,
   },
-
+  
   problem: {
     description:
-      'Learners often struggle to discover the right mentors, while professionals lack a streamlined way to offer consultations, mentorship programs, and knowledge-sharing services.',
+      'Schools often rely on fragmented systems for attendance, assignments, communication, and academic tracking, creating inefficiencies for teachers, students, and parents.',
     points: [
-      'Difficult mentor discovery process',
-      'Manual session scheduling and coordination',
-      'Scattered communication channels',
-      'Limited trust and profile credibility',
-      'Complex booking and payment workflows',
+      'Scattered academic information',
+      'Manual attendance and assignment tracking',
+      'Limited parent-school communication',
+      'Difficulty monitoring student performance',
+      'Complex administrative workflows',
     ],
     pointImg: litebite6,
   },
-
+  
   goal: {
     description:
-      'Design a seamless mentorship ecosystem that helps professionals showcase expertise, manage bookings, and connect with learners through structured guidance experiences.',
+      'Create a unified school platform that simplifies academic management while providing role-based experiences for students, teachers, parents, and administrators.',
     cards: [
       {
         image: litebite7,
-        title: 'Expert',
-        subtitle: 'Profiles',
+        title: 'Student',
+        subtitle: 'Dashboard',
       },
       {
         image: litebite8,
-        title: 'Session',
-        subtitle: 'Booking',
+        title: 'Teacher',
+        subtitle: 'Management',
       },
       {
         image: litebite9,
-        title: 'Career',
-        subtitle: 'Guidance',
+        title: 'Parent',
+        subtitle: 'Portal',
       },
       {
         image: litebite10,
-        title: 'Mentorship',
-        subtitle: 'Programs',
+        title: 'Attendance',
+        subtitle: 'Tracking',
       },
       {
         image: litebite11,
-        title: 'Creator',
-        subtitle: 'Monetization',
+        title: 'Assignments',
+        subtitle: 'Management',
       },
       {
         image: litebite12,
-        title: 'Community',
-        subtitle: 'Networking',
+        title: 'School',
+        subtitle: 'Communication',
       },
     ],
   },
-
+  
   process: [
     {
       title: 'Discover',
-      description: 'User research, mentor interviews & competitor analysis',
+      description: 'School workflow research, stakeholder interviews & competitor analysis',
       image: litebite13,
     },
     {
       title: 'Define',
-      description: 'Personas, user journeys & booking workflows',
+      description: 'User journeys, personas & academic workflows',
       image: litebite14,
     },
     {
       title: 'Architect',
-      description: 'Information architecture and platform structure',
+      description: 'Role-based navigation, user flows & information architecture',
       image: litebite15,
     },
     {
       title: 'Design',
-      description: 'Wireframes, UI design and interactive prototypes',
+      description: 'Wireframes, dashboard experiences & prototypes',
       image: litebite16,
     },
     {
       title: 'Validate',
-      description: 'Usability testing and iterative improvements',
+      description: 'Usability testing and workflow improvements',
       image: litebite17,
     },
     {
       title: 'Deliver',
-      description: 'Design system, documentation and developer handoff',
+      description: 'Design system, handoff & implementation support',
       image: litebite18,
     },
   ],
-
- 
-},
-  9: {
-  template: 'long',
-
-  hero: {
-    label: 'CASE STUDY',
-    brand: 'CELCIUS WMS',
-    logo: transporterlogo,
-    headline: 'Designing a Warehouse Control Center for Operational Excellence',
-    description:
-      'A warehouse management dashboard designed to help operations teams monitor inventory health, warehouse utilization, purchase orders, stock transfers, and compliance workflows from a single workspace.',
-    tags: [
-      'Warehouse Management',
-      'Dashboard Design',
-      'Enterprise SaaS',
-      'Operations',
-      'Analytics',
-    ],
-
-    image: mainsvg,
-  },
-
-  overview: {
-    headingImage: artus5,
-
-    product: 'Warehouse Management System (WMS)',
-    productImage: artus6,
-
-    platform: 'Web Application',
-    platformImage: artus7,
-
-    timeline: '2025',
-    timelineImage: artus8,
-
-    role:
-      'As the Product Designer, I transformed complex warehouse workflows into an actionable dashboard experience by defining information hierarchy.',
-    roleImage: artus9,
-
-    team: [
-      'Product Manager',
-      'Warehouse Operations Team'
-    ],
-    teamImage: artus10,
-
-    skills: [
-      'Product Design',
-      'Data Visualization',
-      'Design Systems',
-    ],
-    skillsImage: artus11,
-
-    impact:
-      'Created a centralized warehouse operations dashboard enabling teams to monitor inventory, utilization, compliance, and operational performance.',
-    impactImage: artus12,
-  },
-
-  flowerImage: artus13,
-
-  introduction: [
-    'Warehouse operations teams manage inventory, storage capacity, purchase orders, stock transfers, cycle counts, agreements, and product health across multiple facilities.',
-    'The challenge was to design a single operational dashboard that provides instant visibility into warehouse performance while helping teams identify issues before they impact operations.',
+  
+  features: [
+    {
+      title: 'Role-Based Experience',
+      description:
+        'Dedicated experiences for students, teachers, parents, and administrators based on their responsibilities.',
+      image: own1,
+    },
+    {
+      title: 'Attendance Management',
+      description:
+        'Track student attendance digitally with real-time updates and reporting.',
+      image: own2,
+    },
+    {
+      title: 'Assignments & Homework',
+      description:
+        'Manage assignments, submissions, deadlines, and academic tasks from a centralized workspace.',
+      image: own3,
+    },
+    {
+      title: 'Academic Progress Tracking',
+      description:
+        'Monitor grades, performance, examinations, and overall student growth through visual dashboards.',
+      image: own4,
+    },
+    {
+      title: 'Parent Communication Hub',
+      description:
+        'Enable seamless communication between parents, teachers, and schools through notifications and updates.',
+      image: own5,
+    },
   ],
-
-  problemStatement: {
-    intro: 'Research with warehouse stakeholders revealed key operational challenges:',
-    points: [
-      'Limited visibility into warehouse utilization and capacity',
-      'Inventory health data scattered across multiple reports',
-      'Difficult monitoring of stock transfers and purchase orders',
-      'Manual tracking of expiring agreements and annexures',
-      'Lack of centralized operational insights for decision-making',
-    ],
-    closing:
-      'The challenge was creating an enterprise dashboard that surfaces critical warehouse metrics without overwhelming users with operational data.',
   },
+  6: {
+    template: 'short',
+    hero: {
+      label: 'Project',
+      brand: 'Vlieg Engineering',
+      subtitle: 'Engineering Process Automation Platform',
+      description:
+        'A modern engineering software platform designed to automate complex workflows, improve operational efficiency, and provide teams with greater visibility and control.',
+      tags: [
+        'Web App',
+        'Enterprise Software',
+        'Engineering',
+        'Automation',
+        'Design System',
+      ],
+      ctaLabel: 'View Project',
+      ctaLink: 'https://www.figma.com/community/file/1646066498037055533',
+      image: litebite1,
+      logo: litebite24,
+      images: null,
+    },
 
-  solution: {
-    intro:
-      'The redesigned WMS dashboard provides a centralized command center for warehouse operations.',
-    points: [
-      'Monitor warehouse, pallet, weight, and volume utilization',
-      'Track SKU health and inventory conditions',
-      'View purchase orders and stock transfer status',
-      'Monitor pending annexures and expiring agreements',
-      'Analyze warehouse trends through operational reports',
-      'Access warehouse-wide performance insights from a single dashboard',
+    overview: {
+      role: 'Product Designer (End-to-End)',
+      roleImg: litebite2,
+
+      timeline: '2024',
+      timelineImg: litebite3,
+
+      platform: 'Web Application',
+      platformImg: litebite4,
+
+      tools: ['Figma', 'FigJam', 'Design System'],
+      toolsImg: litebite5,
+    },
+
+    problem: {
+      description:
+        'Engineering teams often rely on fragmented tools and manual processes, resulting in inefficiencies, reduced visibility, and inconsistent execution.',
+      points: [
+        'Complex engineering workflows',
+        'Manual and repetitive operational tasks',
+        'Limited process visibility',
+        'Scattered project information',
+        'Lack of design consistency across modules',
+      ],
+      pointImg: litebite6,
+    },
+
+    goal: {
+      description:
+        'Create a scalable platform and design system that simplifies engineering operations while improving efficiency, consistency, and user experience.',
+      cards: [
+        {
+          image: litebite7,
+          title: 'Process',
+          subtitle: 'Automation',
+        },
+        {
+          image: litebite8,
+          title: 'Operational',
+          subtitle: 'Visibility',
+        },
+        {
+          image: litebite9,
+          title: 'Engineering',
+          subtitle: 'Workflows',
+        },
+        {
+          image: litebite10,
+          title: 'Scalable',
+          subtitle: 'Design System',
+        },
+        {
+          image: litebite11,
+          title: 'Team',
+          subtitle: 'Efficiency',
+        },
+        {
+          image: litebite12,
+          title: 'Data-Driven',
+          subtitle: 'Decisions',
+        },
+      ],
+    },
+
+    process: [
+      {
+        title: 'Discover',
+        description: 'Stakeholder interviews, workflow analysis & product understanding',
+        image: litebite13,
+      },
+      {
+        title: 'Define',
+        description: 'User needs, process gaps & business objectives',
+        image: litebite14,
+      },
+      {
+        title: 'Structure',
+        description: 'Information architecture, flows & dashboard planning',
+        image: litebite15,
+      },
+      {
+        title: 'Design',
+        description: 'Design system, components & enterprise interfaces',
+        image: litebite16,
+      },
+      {
+        title: 'Validate',
+        description: 'Feedback loops, reviews & iterative improvements',
+        image: litebite17,
+      },
+      {
+        title: 'Deliver',
+        description: 'Developer handoff & scalable design documentation',
+        image: litebite18,
+      },
     ],
-    tickImage: artus14,
-  },
 
-  outcome: {
-    titleImage: artus18,
-
-    title: 'FINAL OUTCOME',
-
-    description:
-      'The final solution transformed fragmented warehouse reporting into a centralized operational control center, enabling faster monitoring and more informed decisions.',
-
-    metrics: [
+    features: [
       {
-        value: '55%',
-        label: 'Improved Inventory Visibility',
-        icon: out1,
+        title: 'Workflow Automation',
+        description:
+          'Automates repetitive engineering processes to reduce manual effort and improve operational speed.',
+        image: rodly1,
       },
       {
-        value: '45%',
-        label: 'Faster Operational Monitoring',
-        icon: out2,
+        title: 'Centralized Operations',
+        description:
+          'Provides a unified workspace for monitoring projects, workflows, and engineering activities.',
+        image: litebite20,
       },
       {
-        value: '40%',
-        label: 'Reduced Manual Reporting',
-        icon: out3,
+        title: 'Analytics & Insights',
+        description:
+          'Transforms operational data into actionable insights for better decision-making.',
+        image: rodly3,
       },
       {
-        value: '50%',
-        label: 'Better Warehouse Utilization Tracking',
-        icon: out4,
+        title: 'Design System',
+        description:
+          'Built a scalable design system to ensure consistency, faster development, and reusable patterns.',
+        image: litebite22,
       },
       {
-        value: '60%',
-        label: 'Improved Decision-Making Speed',
-        icon: out5,
+        title: 'Enterprise Experience',
+        description:
+          'Designed intuitive interfaces that simplify complex engineering workflows without sacrificing functionality.',
+        image: litebite23,
       },
     ],
   },
+  7: {
+    template: 'short',
 
-  takeaway: {
-    text:
-      'Designing enterprise warehouse systems is about transforming operational complexity into clarity. By prioritizing visibility, hierarchy, and actionable insights, the dashboard enables teams to make faster and more confident operational decisions.',
+    hero: {
+      label: 'Project',
+      brand: 'Boansel',
+      subtitle: 'Mentorship & Professional Networking Platform',
+      description:
+        'A platform that connects learners with industry experts through mentorship, consultations, portfolio reviews, and career guidance while helping professionals monetize their knowledge.',
+      tags: [
+        'Mentorship',
+        'Creator Economy',
+        'Career Growth',
+        'Marketplace',
+        'SaaS',
+      ],
+      ctaLabel: 'View Project',
+      ctaLink: 'https://www.figma.com/@khushishroff',
+      image: bonmain,
+      logo: bonlogo,
+      images: null,
+    },
 
-    steps: [
+    overview: {
+      role: 'Product Designer (End-to-End)',
+      roleImg: litebite2,
+
+      timeline: '2025',
+      timelineImg: litebite3,
+
+      platform: 'Web Application',
+      platformImg: litebite4,
+
+      tools: ['Figma', 'FigJam', 'Notion', 'Prototype'],
+      toolsImg: litebite5,
+    },
+
+    problem: {
+      description:
+        'Learners often struggle to discover the right mentors, while professionals lack a streamlined way to offer consultations, mentorship programs, and knowledge-sharing services.',
+      points: [
+        'Difficult mentor discovery process',
+        'Manual session scheduling and coordination',
+        'Scattered communication channels',
+        'Limited trust and profile credibility',
+        'Complex booking and payment workflows',
+      ],
+      pointImg: litebite6,
+    },
+
+    goal: {
+      description:
+        'Design a seamless mentorship ecosystem that helps professionals showcase expertise, manage bookings, and connect with learners through structured guidance experiences.',
+      cards: [
+        {
+          image: litebite7,
+          title: 'Expert',
+          subtitle: 'Profiles',
+        },
+        {
+          image: litebite8,
+          title: 'Session',
+          subtitle: 'Booking',
+        },
+        {
+          image: litebite9,
+          title: 'Career',
+          subtitle: 'Guidance',
+        },
+        {
+          image: litebite10,
+          title: 'Mentorship',
+          subtitle: 'Programs',
+        },
+        {
+          image: litebite11,
+          title: 'Creator',
+          subtitle: 'Monetization',
+        },
+        {
+          image: litebite12,
+          title: 'Community',
+          subtitle: 'Networking',
+        },
+      ],
+    },
+
+    process: [
       {
-        value: 'Understand Operations',
-        icon: artus19,
+        title: 'Discover',
+        description: 'User research, mentor interviews & competitor analysis',
+        image: litebite13,
       },
       {
-        value: 'Organize Data',
-        icon: artus20,
+        title: 'Define',
+        description: 'Personas, user journeys & booking workflows',
+        image: litebite14,
       },
       {
-        value: 'Surface Insights',
-        icon: artus21,
+        title: 'Architect',
+        description: 'Information architecture and platform structure',
+        image: litebite15,
       },
       {
-        value: 'Enable Decisions',
-        icon: artus22,
+        title: 'Design',
+        description: 'Wireframes, UI design and interactive prototypes',
+        image: litebite16,
+      },
+      {
+        title: 'Validate',
+        description: 'Usability testing and iterative improvements',
+        image: litebite17,
+      },
+      {
+        title: 'Deliver',
+        description: 'Design system, documentation and developer handoff',
+        image: litebite18,
+      },
+    ],
+
+  
+  },
+  8: {
+    template: 'short',
+    hero: {
+      label: 'Project',
+      brand: 'ReqBeam',
+      subtitle: 'Open-Source Docker-First API Testing Platform',
+      description:
+        'A modern API testing platform that enables developers to build, mock, test, document, and automate APIs through a unified web and CLI experience.',
+      tags: [
+        'Developer Tools',
+        'API Testing',
+        'Open Source',
+        'Docker',
+        'SaaS',
+      ],
+      ctaLabel: 'View Project',
+      ctaLink: 'https://www.figma.com/community/file/1646061362516933631',
+      image: reqmain,
+      logo: reqlogo,
+      images: null,
+    },
+
+    overview: {
+      role: 'Product Designer (End-to-End)',
+      roleImg: litebite2,
+
+      timeline: '2025',
+      timelineImg: litebite3,
+
+      platform: 'Web Application',
+      platformImg: litebite4,
+
+      tools: ['Figma', 'FigJam'],
+      toolsImg: litebite5,
+    },
+
+    problem: {
+      description:
+        'Developers often rely on multiple disconnected tools for API testing, mocking, documentation, and automation, leading to fragmented workflows and reduced productivity.',
+      points: [
+        'Switching between multiple API tools',
+        'Complex onboarding and setup processes',
+        'Lack of centralized API lifecycle management',
+        'Difficulty collaborating across teams',
+        'Manual testing and repetitive workflows',
+      ],
+      pointImg: litebite6,
+    },
+
+    goal: {
+      description:
+        'Design a developer-first platform that simplifies API development, testing, and automation while reducing complexity and improving workflow efficiency.',
+      cards: [
+        {
+          image: litebite7,
+          title: 'API',
+          subtitle: 'Testing',
+        },
+        {
+          image: litebite8,
+          title: 'Mock',
+          subtitle: 'Services',
+        },
+        {
+          image: litebite9,
+          title: 'Docker',
+          subtitle: 'First',
+        },
+        {
+          image: litebite10,
+          title: 'CLI + Web',
+          subtitle: 'Experience',
+        },
+        {
+          image: litebite11,
+          title: 'Team',
+          subtitle: 'Collaboration',
+        },
+        {
+          image: litebite12,
+          title: 'Automation',
+          subtitle: 'Workflows',
+        },
+      ],
+    },
+
+    process: [
+      {
+        title: 'Discover',
+        description: 'Developer interviews, workflow analysis & competitor research',
+        image: litebite13,
+      },
+      {
+        title: 'Define',
+        description: 'User needs, pain points & product requirements',
+        image: litebite14,
+      },
+      {
+        title: 'Architect',
+        description: 'Information architecture, navigation & user flows',
+        image: litebite15,
+      },
+      {
+        title: 'Design',
+        description: 'Wireframes, UI design system & prototypes',
+        image: litebite16,
+      },
+      {
+        title: 'Validate',
+        description: 'Usability reviews, feedback & iterations',
+        image: litebite17,
+      },
+      {
+        title: 'Deliver',
+        description: 'Design handoff, documentation & implementation support',
+        image: litebite18,
       },
     ],
   },
-},
+  9: {
+    template: 'long',
 
+    hero: {
+      label: 'CASE STUDY',
+      brand: 'CELCIUS WMS',
+      logo: transporterlogo,
+      headline: 'Designing a Warehouse Control Center for Operational Excellence',
+      description:
+        'A warehouse management dashboard designed to help operations teams monitor inventory health, warehouse utilization, purchase orders, stock transfers, and compliance workflows from a single workspace.',
+      tags: [
+        'Warehouse Management',
+        'Dashboard Design',
+        'Enterprise SaaS',
+        'Operations',
+        'Analytics',
+      ],
+
+      image: mainsvg,
+    },
+
+    overview: {
+      headingImage: artus5,
+
+      product: 'Warehouse Management System (WMS)',
+      productImage: artus6,
+
+      platform: 'Web Application',
+      platformImage: artus7,
+
+      timeline: '2025',
+      timelineImage: artus8,
+
+      role:
+        'As the Product Designer, I transformed complex warehouse workflows into an actionable dashboard experience by defining information hierarchy.',
+      roleImage: artus9,
+
+      team: [
+        'Product Manager',
+        'Warehouse Operations Team'
+      ],
+      teamImage: artus10,
+
+      skills: [
+        'Product Design',
+        'Data Visualization',
+        'Design Systems',
+      ],
+      skillsImage: artus11,
+
+      impact:
+        'Created a centralized warehouse operations dashboard enabling teams to monitor inventory, utilization, compliance, and operational performance.',
+      impactImage: artus12,
+    },
+
+    flowerImage: artus13,
+
+    introduction: [
+      'Warehouse operations teams manage inventory, storage capacity, purchase orders, stock transfers, cycle counts, agreements, and product health across multiple facilities.',
+      'The challenge was to design a single operational dashboard that provides instant visibility into warehouse performance while helping teams identify issues before they impact operations.',
+    ],
+
+    problemStatement: {
+      intro: 'Research with warehouse stakeholders revealed key operational challenges:',
+      points: [
+        'Limited visibility into warehouse utilization and capacity',
+        'Inventory health data scattered across multiple reports',
+        'Difficult monitoring of stock transfers and purchase orders',
+        'Manual tracking of expiring agreements and annexures',
+        'Lack of centralized operational insights for decision-making',
+      ],
+      closing:
+        'The challenge was creating an enterprise dashboard that surfaces critical warehouse metrics without overwhelming users with operational data.',
+    },
+
+    solution: {
+      intro:
+        'The redesigned WMS dashboard provides a centralized command center for warehouse operations.',
+      points: [
+        'Monitor warehouse, pallet, weight, and volume utilization',
+        'Track SKU health and inventory conditions',
+        'View purchase orders and stock transfer status',
+        'Monitor pending annexures and expiring agreements',
+        'Analyze warehouse trends through operational reports',
+        'Access warehouse-wide performance insights from a single dashboard',
+      ],
+      tickImage: artus14,
+    },
+
+    outcome: {
+      titleImage: artus18,
+
+      title: 'FINAL OUTCOME',
+
+      description:
+        'The final solution transformed fragmented warehouse reporting into a centralized operational control center, enabling faster monitoring and more informed decisions.',
+
+      metrics: [
+        {
+          value: '55%',
+          label: 'Improved Inventory Visibility',
+          icon: out1,
+        },
+        {
+          value: '45%',
+          label: 'Faster Operational Monitoring',
+          icon: out2,
+        },
+        {
+          value: '40%',
+          label: 'Reduced Manual Reporting',
+          icon: out3,
+        },
+        {
+          value: '50%',
+          label: 'Better Warehouse Utilization Tracking',
+          icon: out4,
+        },
+        {
+          value: '60%',
+          label: 'Improved Decision-Making Speed',
+          icon: out5,
+        },
+      ],
+    },
+
+    takeaway: {
+      text:
+        'Designing enterprise warehouse systems is about transforming operational complexity into clarity. By prioritizing visibility, hierarchy, and actionable insights, the dashboard enables teams to make faster and more confident operational decisions.',
+
+      steps: [
+        {
+          value: 'Understand Operations',
+          icon: artus19,
+        },
+        {
+          value: 'Organize Data',
+          icon: artus20,
+        },
+        {
+          value: 'Surface Insights',
+          icon: artus21,
+        },
+        {
+          value: 'Enable Decisions',
+          icon: artus22,
+        },
+      ],
+    },
+  }
 }
 
 export const getProjectDetail = (id) => projectDetails[Number(id)] ?? null
