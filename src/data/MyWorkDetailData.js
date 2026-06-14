@@ -72,7 +72,8 @@ import own3 from '../assets/Images/ownschool/own3.svg';
 import own4 from '../assets/Images/ownschool/own4.svg';
 import own5 from '../assets/Images/ownschool/own5.svg';
 import bonlogo from '../assets/Images/Boansel/bonlogo.svg';
-import bonmain from '../assets/Images/Boansel/bonmain.svg'
+import bonmain from '../assets/Images/Boansel/bonmain.svg';
+
 export const projectDetails = {
   1: {
     template: 'short',
