@@ -55,13 +55,13 @@ import before from '../assets/Images/Transporter/before.svg';
 import after from '../assets/Images/Transporter/after.svg';
 import hypside from '../assets/Images/HYP/hypside.svg';
 import mainsvg from '../assets/Images/wms/main.svg';
-// import rodlymain from '../assets/Images/Rodly/rodlymain.svg';
-// import rodlylogo from '../assets/Images/Rodly/rodlylogo.svg';
+import rodlymain from '../assets/Images/rodly/rodlymain.svg';
+import rodlylogo from '../assets/Images/rodly/rodlylogo.svg';
 import rodly1 from '../assets/Images/rodly/image1.svg';
-// import rodly2 from '../assets/Images/Rodly/image2.svg';
+import rodly2 from '../assets/Images/rodly/image2.svg';
 import rodly3 from '../assets/Images/rodly/image3.svg';
-// import rodly4 from '../assets/Images/Rodly/image4.svg';
-// import rodly5 from '../assets/Images/Rodly/image5.svg';
+import rodly4 from '../assets/Images/rodly/image4.svg';
+import rodly5 from '../assets/Images/rodly/image5.svg';
 import reqlogo from '../assets/Images/reqbeam/reqlogo.svg';
 import reqmain from '../assets/Images/reqbeam/reqmain.svg';
 import ownmain from '../assets/Images/ownschool/ownmain.svg';
@@ -188,13 +188,13 @@ export const projectDetails = {
       headingImage: artus5,
       product: 'AI Product Development Platform',
       productImage: artus6,
-      platform: 'Web Application',
+      platform: 'Web & Mobile Application',
       platformImage: artus7,
       timeline: 'Jan 2024 – Mar 2025',
       timelineImage: artus8,
       role: 'Led end-to-end product design including UX strategy, information architecture, interaction design, and design system development.',
       roleImage: artus9,
-      team: ['2 Founder', '2 Product Designer', '2 Engineers'],
+      team: ['2 Founder', '1 Product Designer', '2 Engineers'],
       teamImage: artus10,
       skills: [
         'Product Design',
@@ -206,7 +206,7 @@ export const projectDetails = {
       ],
       skillsImage: artus11,
       impact:
-        'Helped transform early-stage concepts into a structured AI-powered product development platform used by product teams to accelerate planning and execution.',
+        'Helped transform early-stage concepts into a structured AI-powered product development platform used by product teams to accelerate planning.',
       impactImage: artus12
     },
     flowerImage: artus13,
@@ -319,7 +319,7 @@ export const projectDetails = {
       platform: 'iOS & Android',
       platformImage: artus7,
 
-      timeline: 'Jan 2024 – Jun 2024',
+      timeline: 'Jan 2026 – March 2026',
       timelineImage: artus8,
 
       role:
@@ -329,22 +329,20 @@ export const projectDetails = {
       team: [
         'Product Manager',
         'Business Team',
-        'Engineering Team',
+        '2 Product Designers',
       ],
       teamImage: artus10,
 
       skills: [
         'Product Design',
         'Mobile UX',
-        'Information Architecture',
         'User Flows',
         'Design Systems',
-        'Prototyping',
       ],
       skillsImage: artus11,
 
       impact:
-        'Created a transporter-first experience that streamlined bidding, trip tracking, documentation, and fleet management into a single mobile platform.',
+        'Created a transporter-first experience that streamlined fleet management into a single mobile platform.',
       impactImage: artus12,
     },
 
@@ -503,7 +501,7 @@ export const projectDetails = {
       platform: 'Web Application',
       platformImage: artus7,
 
-      timeline: '2025',
+      timeline: 'May 2026 - June 2026',
       timelineImage: artus8,
 
       role:
@@ -513,22 +511,20 @@ export const projectDetails = {
       team: [
         'Product Manager',
         'Operations Team',
-        'Engineering Team',
+        'Product Designer',
       ],
       teamImage: artus10,
 
       skills: [
         'Product Design',
-        'Dashboard UX',
         'Data Visualization',
-        'Information Architecture',
         'Design Systems',
         'User Flows',
       ],
       skillsImage: artus11,
 
       impact:
-        'Created a centralized dashboard that improved visibility across delivery operations, billing performance, annexure tracking, and shipment movement.',
+        'Created a centralized dashboard that improved visibility across shipment movement.',
       impactImage: artus12,
     },
 
@@ -643,7 +639,6 @@ export const projectDetails = {
       'School ERP',
       'Mobile App',
       'Dashboard',
-      'UX/UI Design',
     ],
     ctaLabel: 'View Project',
     ctaLink: 'https://www.figma.com/community/file/1587728008984342745',
@@ -656,13 +651,13 @@ export const projectDetails = {
     role: 'Product Designer (End-to-End)',
     roleImg: litebite2,
   
-    timeline: '2025',
+    timeline: 'Dec 2025 – Jan 2026',
     timelineImg: litebite3,
   
     platform: 'Web & Mobile Application',
     platformImg: litebite4,
   
-    tools: ['Figma', 'FigJam', 'Notion', 'Prototype'],
+    tools: ['Figma', 'FigJam', 'Prototype'],
     toolsImg: litebite5,
   },
   
@@ -799,8 +794,8 @@ export const projectDetails = {
       ],
       ctaLabel: 'View Project',
       ctaLink: 'https://www.figma.com/community/file/1646066498037055533',
-      image: litebite1,
-      logo: litebite24,
+      image: rodlymain,
+      logo: rodlylogo,
       images: null,
     },
 
@@ -808,10 +803,10 @@ export const projectDetails = {
       role: 'Product Designer (End-to-End)',
       roleImg: litebite2,
 
-      timeline: '2024',
+      timeline: '2026',
       timelineImg: litebite3,
 
-      platform: 'Web Application',
+      platform: 'Web & Mobile Application',
       platformImg: litebite4,
 
       tools: ['Figma', 'FigJam', 'Design System'],
@@ -912,7 +907,7 @@ export const projectDetails = {
         title: 'Centralized Operations',
         description:
           'Provides a unified workspace for monitoring projects, workflows, and engineering activities.',
-        image: litebite20,
+        image: rodly2,
       },
       {
         title: 'Analytics & Insights',
@@ -924,13 +919,13 @@ export const projectDetails = {
         title: 'Design System',
         description:
           'Built a scalable design system to ensure consistency, faster development, and reusable patterns.',
-        image: litebite22,
+        image: rodly4,
       },
       {
         title: 'Enterprise Experience',
         description:
           'Designed intuitive interfaces that simplify complex engineering workflows without sacrificing functionality.',
-        image: litebite23,
+        image: rodly5,
       },
     ],
   },
@@ -944,9 +939,7 @@ export const projectDetails = {
       description:
         'A platform that connects learners with industry experts through mentorship, consultations, portfolio reviews, and career guidance while helping professionals monetize their knowledge.',
       tags: [
-        'Mentorship',
         'Creator Economy',
-        'Career Growth',
         'Marketplace',
         'SaaS',
       ],
@@ -961,13 +954,13 @@ export const projectDetails = {
       role: 'Product Designer (End-to-End)',
       roleImg: litebite2,
 
-      timeline: '2025',
+      timeline: 'Nov 2025 - Dec 2025',
       timelineImg: litebite3,
 
       platform: 'Web Application',
       platformImg: litebite4,
 
-      tools: ['Figma', 'FigJam', 'Notion', 'Prototype'],
+      tools: ['Figma', 'Notion', 'Prototype'],
       toolsImg: litebite5,
     },
 
@@ -1082,7 +1075,7 @@ export const projectDetails = {
       role: 'Product Designer (End-to-End)',
       roleImg: litebite2,
 
-      timeline: '2025',
+      timeline: 'Oct 2025',
       timelineImg: litebite3,
 
       platform: 'Web Application',
@@ -1189,8 +1182,6 @@ export const projectDetails = {
         'Warehouse Management',
         'Dashboard Design',
         'Enterprise SaaS',
-        'Operations',
-        'Analytics',
       ],
 
       image: mainsvg,
@@ -1205,7 +1196,7 @@ export const projectDetails = {
       platform: 'Web Application',
       platformImage: artus7,
 
-      timeline: '2025',
+      timeline: 'Nov 2025',
       timelineImage: artus8,
 
       role:
