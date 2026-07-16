@@ -75,96 +75,154 @@ import bonlogo from '../assets/Images/Boansel/bonlogo.svg';
 import bonmain from '../assets/Images/Boansel/bonmain.svg';
 
 export const projectDetails = {
-  1: {
-    template: 'short',
+   1: {
+    template: 'long',
+
     hero: {
-      label: 'Project',
-      brand: 'liteBite',
-      subtitle: 'Smart Meal Planner & Nutrition Tracker',
+      label: 'CASE STUDY',
+      brand: 'CELCIUS WMS',
+      logo: transporterlogo,
+      headline: 'Designing a Warehouse Control Center for Customer Excellence',
       description:
-        'An AI-powered nutrition platform that helps users plan meals, track calories, and maintain healthy eating habits with personalized recommendations.',
-      tags: ['Mobile App', 'AI', 'Health & Wellness', 'Nutrition', 'UX/UI Design'],
-      ctaLabel: 'View Project',
-      ctaLink: 'https://www.figma.com/community/file/1573025095988578251',
-      image: litebite1,
-      logo: litebite24,
-      images: null,
+        'A warehouse management dashboard designed to help customers monitor inventory health, warehouse utilization, purchase orders, stock transfers, and compliance workflows from a single workspace.',
+      tags: [
+        'Warehouse Management',
+        'Dashboard Design',
+        'Enterprise SaaS',
+      ],
+
+      image: mainsvg,
     },
+
     overview: {
-      role: 'Product Designer (End-to-End)',
-      roleImg: litebite2,
-      timeline: 'Jan 2024 – Mar 2024 (3 Months)',
-      timelineImg: litebite3,
-      platform: 'Android',
-      platformImg: litebite4,
-      tools: ['Figma', 'Figjam', 'Notion', 'UX'],
-      toolsImg: litebite5
+      headingImage: artus5,
+
+      product: 'Warehouse Management System (WMS)',
+      productImage: artus6,
+
+      platform: 'Web Application',
+      platformImage: artus7,
+
+      timeline: 'Nov 2025',
+      timelineImage: artus8,
+
+      role:
+        'As the Product Designer, I transformed complex warehouse workflows into an actionable dashboard experience by defining information hierarchy.',
+      roleImage: artus9,
+
+      team: [
+        'Product Manager',
+        'Warehouse Operations Team'
+      ],
+      teamImage: artus10,
+
+      skills: [
+        'Product Design',
+        'Data Visualization',
+        'Design Systems',
+      ],
+      skillsImage: artus11,
+
+      impact:
+        'Created a centralized warehouse customer dashboard enabling teams to monitor inventory, utilization, compliance, and operational performance.',
+      impactImage: artus12,
     },
-    problem: {
-      description:
-        'Maintaining a healthy diet is challenging due to lack of personalization, poor tracking tools, and rigid meal plans.',
+
+    flowerImage: artus13,
+
+    introduction: [
+      'Warehouse operations teams manage inventory, storage capacity, purchase orders, stock transfers, cycle counts, agreements, and product health across multiple facilities.',
+      'The challenge was to design a single operational dashboard that provides instant visibility into warehouse performance while helping teams identify issues before they impact operations.',
+    ],
+
+    problemStatement: {
+      intro: 'Research with warehouse stakeholders revealed key operational challenges:',
       points: [
-        'Generic meal plans without personalization',
-        'Difficult calorie and macro tracking',
-        'Limited flexibility in meal choices',
-        'Low motivation to maintain consistency',
-        'Complicated subscription management',
+        'Limited visibility into warehouse utilization and capacity',
+        'Inventory health data scattered across multiple reports',
+        'Difficult monitoring of stock transfers and purchase orders',
+        'Manual tracking of expiring agreements and annexures',
+        'Lack of centralized operational insights for decision-making',
       ],
-      pointImg: litebite6
+      closing:
+        'The challenge was creating an enterprise dashboard that surfaces critical warehouse metrics without overwhelming users with operational data.',
     },
-    goal: {
+
+    solution: {
+      intro:
+        'The redesigned WMS dashboard provides a centralized command center for warehouse operations.',
+      points: [
+        'Monitor warehouse, pallet, weight, and volume utilization',
+        'Track SKU health and inventory conditions',
+        'View purchase orders and stock transfer status',
+        'Monitor pending annexures and expiring agreements',
+        'Analyze warehouse trends through operational reports',
+        'Access warehouse-wide performance insights from a single dashboard',
+      ],
+      tickImage: artus14,
+    },
+
+    outcome: {
+      titleImage: artus18,
+
+      title: 'FINAL OUTCOME',
+
       description:
-        'Create a flexible, personalized nutrition experience that simplifies healthy eating through AI-driven meal planning and effortless tracking.',
-      cards: [
-        { image: litebite7, title: 'Personalized AI', subtitle: 'Meal Plans' },
-        { image: litebite8, title: 'Track Calories', subtitle: 'Macros & Progress' },
-        { image: litebite9, title: 'Easy Meal Swap', subtitle: 'Anytime' },
-        { image: litebite10, title: 'Hassle Free', subtitle: 'Subscription' },
-        { image: litebite11, title: 'Rewards', subtitle: 'For Users' },
-        { image: litebite12, title: 'Simplify Healthy', subtitle: 'Eating Journey' },
+        'The final solution transformed fragmented warehouse reporting into a centralized operational control center, enabling faster monitoring and more informed decisions.',
+
+      metrics: [
+        {
+          value: '55%',
+          label: 'Improved Inventory Visibility',
+          icon: out1,
+        },
+        {
+          value: '45%',
+          label: 'Faster Operational Monitoring',
+          icon: out2,
+        },
+        {
+          value: '40%',
+          label: 'Reduced Manual Reporting',
+          icon: out3,
+        },
+        {
+          value: '50%',
+          label: 'Better Warehouse Utilization Tracking',
+          icon: out4,
+        },
+        {
+          value: '60%',
+          label: 'Improved Decision-Making Speed',
+          icon: out5,
+        },
       ],
     },
-    process: [
-      { title: 'Discover', description: 'User research, competitor analysis & insights', image: litebite13 },
-      { title: 'Define', description: 'User personas, problem statements & goals', image: litebite14 },
-      { title: 'Idea', description: 'User flows, information architecture, sketches', image: litebite15 },
-      { title: 'Design', description: 'Wireframes, UI design, prototypes', image: litebite16 },
-      { title: 'Test', description: 'Usability testing, feedback & iterations', image: litebite17 },
-      { title: 'Deliver', description: 'Handoff, design system & implementation', image: litebite18 },
-    ],
-    features: [
-      {
-        title: 'AI Meal Planner',
-        description:
-          'Generates personalized meal recommendations based on fitness goals, dietary preferences & allergies.',
-        image: litebite19,
-      },
-      {
-        title: 'Meal Swap',
-        description:
-          'Allows users to instantly replace meals while automatically maintaining nutritional balance.',
-        image: litebite20,
-      },
-      {
-        title: 'Nutrition Tracking',
-        description:
-          'Tracks calories, protein, carbs, fats, water intake, and overall progress through simple visual dashboards.',
-        image: litebite21,
-      },
-      {
-        title: 'Subscription Management',
-        description:
-          'Flexible subscription controls allowing users to pause, freeze, upgrade, or cancel plans anytime.',
-        image: litebite22,
-      },
-      {
-        title: 'Rewards Zone',
-        description:
-          'Encourages consistency through points, rewards, vouchers, and healthy habit milestones.',
-        image: litebite23,
-      },
-    ],
-  },
+
+    takeaway: {
+      text:
+        'Designing enterprise warehouse systems is about transforming operational complexity into clarity. By prioritizing visibility, hierarchy, and actionable insights, the dashboard enables teams to make faster and more confident operational decisions.',
+
+      steps: [
+        {
+          value: 'Understand Operations',
+          icon: artus19,
+        },
+        {
+          value: 'Organize Data',
+          icon: artus20,
+        },
+        {
+          value: 'Surface Insights',
+          icon: artus21,
+        },
+        {
+          value: 'Enable Decisions',
+          icon: artus22,
+        },
+      ],
+    },
+  }
   2: {
     template: 'long',
     hero: {
@@ -1169,153 +1227,96 @@ export const projectDetails = {
     ],
   },
   9: {
-    template: 'long',
-
+    template: 'short',
     hero: {
-      label: 'CASE STUDY',
-      brand: 'CELCIUS WMS',
-      logo: transporterlogo,
-      headline: 'Designing a Warehouse Control Center for Operational Excellence',
+      label: 'Project',
+      brand: 'liteBite',
+      subtitle: 'Smart Meal Planner & Nutrition Tracker',
       description:
-        'A warehouse management dashboard designed to help operations teams monitor inventory health, warehouse utilization, purchase orders, stock transfers, and compliance workflows from a single workspace.',
-      tags: [
-        'Warehouse Management',
-        'Dashboard Design',
-        'Enterprise SaaS',
-      ],
-
-      image: mainsvg,
+        'An AI-powered nutrition platform that helps users plan meals, track calories, and maintain healthy eating habits with personalized recommendations.',
+      tags: ['Mobile App', 'AI', 'Health & Wellness', 'Nutrition', 'UX/UI Design'],
+      ctaLabel: 'View Project',
+      ctaLink: 'https://www.figma.com/community/file/1573025095988578251',
+      image: litebite1,
+      logo: litebite24,
+      images: null,
     },
-
     overview: {
-      headingImage: artus5,
-
-      product: 'Warehouse Management System (WMS)',
-      productImage: artus6,
-
-      platform: 'Web Application',
-      platformImage: artus7,
-
-      timeline: 'Nov 2025',
-      timelineImage: artus8,
-
-      role:
-        'As the Product Designer, I transformed complex warehouse workflows into an actionable dashboard experience by defining information hierarchy.',
-      roleImage: artus9,
-
-      team: [
-        'Product Manager',
-        'Warehouse Operations Team'
-      ],
-      teamImage: artus10,
-
-      skills: [
-        'Product Design',
-        'Data Visualization',
-        'Design Systems',
-      ],
-      skillsImage: artus11,
-
-      impact:
-        'Created a centralized warehouse operations dashboard enabling teams to monitor inventory, utilization, compliance, and operational performance.',
-      impactImage: artus12,
+      role: 'Product Designer (End-to-End)',
+      roleImg: litebite2,
+      timeline: 'Jan 2024 – Mar 2024 (3 Months)',
+      timelineImg: litebite3,
+      platform: 'Android',
+      platformImg: litebite4,
+      tools: ['Figma', 'Figjam', 'Notion', 'UX'],
+      toolsImg: litebite5
     },
-
-    flowerImage: artus13,
-
-    introduction: [
-      'Warehouse operations teams manage inventory, storage capacity, purchase orders, stock transfers, cycle counts, agreements, and product health across multiple facilities.',
-      'The challenge was to design a single operational dashboard that provides instant visibility into warehouse performance while helping teams identify issues before they impact operations.',
-    ],
-
-    problemStatement: {
-      intro: 'Research with warehouse stakeholders revealed key operational challenges:',
-      points: [
-        'Limited visibility into warehouse utilization and capacity',
-        'Inventory health data scattered across multiple reports',
-        'Difficult monitoring of stock transfers and purchase orders',
-        'Manual tracking of expiring agreements and annexures',
-        'Lack of centralized operational insights for decision-making',
-      ],
-      closing:
-        'The challenge was creating an enterprise dashboard that surfaces critical warehouse metrics without overwhelming users with operational data.',
-    },
-
-    solution: {
-      intro:
-        'The redesigned WMS dashboard provides a centralized command center for warehouse operations.',
-      points: [
-        'Monitor warehouse, pallet, weight, and volume utilization',
-        'Track SKU health and inventory conditions',
-        'View purchase orders and stock transfer status',
-        'Monitor pending annexures and expiring agreements',
-        'Analyze warehouse trends through operational reports',
-        'Access warehouse-wide performance insights from a single dashboard',
-      ],
-      tickImage: artus14,
-    },
-
-    outcome: {
-      titleImage: artus18,
-
-      title: 'FINAL OUTCOME',
-
+    problem: {
       description:
-        'The final solution transformed fragmented warehouse reporting into a centralized operational control center, enabling faster monitoring and more informed decisions.',
-
-      metrics: [
-        {
-          value: '55%',
-          label: 'Improved Inventory Visibility',
-          icon: out1,
-        },
-        {
-          value: '45%',
-          label: 'Faster Operational Monitoring',
-          icon: out2,
-        },
-        {
-          value: '40%',
-          label: 'Reduced Manual Reporting',
-          icon: out3,
-        },
-        {
-          value: '50%',
-          label: 'Better Warehouse Utilization Tracking',
-          icon: out4,
-        },
-        {
-          value: '60%',
-          label: 'Improved Decision-Making Speed',
-          icon: out5,
-        },
+        'Maintaining a healthy diet is challenging due to lack of personalization, poor tracking tools, and rigid meal plans.',
+      points: [
+        'Generic meal plans without personalization',
+        'Difficult calorie and macro tracking',
+        'Limited flexibility in meal choices',
+        'Low motivation to maintain consistency',
+        'Complicated subscription management',
+      ],
+      pointImg: litebite6
+    },
+    goal: {
+      description:
+        'Create a flexible, personalized nutrition experience that simplifies healthy eating through AI-driven meal planning and effortless tracking.',
+      cards: [
+        { image: litebite7, title: 'Personalized AI', subtitle: 'Meal Plans' },
+        { image: litebite8, title: 'Track Calories', subtitle: 'Macros & Progress' },
+        { image: litebite9, title: 'Easy Meal Swap', subtitle: 'Anytime' },
+        { image: litebite10, title: 'Hassle Free', subtitle: 'Subscription' },
+        { image: litebite11, title: 'Rewards', subtitle: 'For Users' },
+        { image: litebite12, title: 'Simplify Healthy', subtitle: 'Eating Journey' },
       ],
     },
+    process: [
+      { title: 'Discover', description: 'User research, competitor analysis & insights', image: litebite13 },
+      { title: 'Define', description: 'User personas, problem statements & goals', image: litebite14 },
+      { title: 'Idea', description: 'User flows, information architecture, sketches', image: litebite15 },
+      { title: 'Design', description: 'Wireframes, UI design, prototypes', image: litebite16 },
+      { title: 'Test', description: 'Usability testing, feedback & iterations', image: litebite17 },
+      { title: 'Deliver', description: 'Handoff, design system & implementation', image: litebite18 },
+    ],
+    features: [
+      {
+        title: 'AI Meal Planner',
+        description:
+          'Generates personalized meal recommendations based on fitness goals, dietary preferences & allergies.',
+        image: litebite19,
+      },
+      {
+        title: 'Meal Swap',
+        description:
+          'Allows users to instantly replace meals while automatically maintaining nutritional balance.',
+        image: litebite20,
+      },
+      {
+        title: 'Nutrition Tracking',
+        description:
+          'Tracks calories, protein, carbs, fats, water intake, and overall progress through simple visual dashboards.',
+        image: litebite21,
+      },
+      {
+        title: 'Subscription Management',
+        description:
+          'Flexible subscription controls allowing users to pause, freeze, upgrade, or cancel plans anytime.',
+        image: litebite22,
+      },
+      {
+        title: 'Rewards Zone',
+        description:
+          'Encourages consistency through points, rewards, vouchers, and healthy habit milestones.',
+        image: litebite23,
+      },
+    ],
+  },
 
-    takeaway: {
-      text:
-        'Designing enterprise warehouse systems is about transforming operational complexity into clarity. By prioritizing visibility, hierarchy, and actionable insights, the dashboard enables teams to make faster and more confident operational decisions.',
-
-      steps: [
-        {
-          value: 'Understand Operations',
-          icon: artus19,
-        },
-        {
-          value: 'Organize Data',
-          icon: artus20,
-        },
-        {
-          value: 'Surface Insights',
-          icon: artus21,
-        },
-        {
-          value: 'Enable Decisions',
-          icon: artus22,
-        },
-      ],
-    },
-  }
 }
 
 export const getProjectDetail = (id) => projectDetails[Number(id)] ?? null

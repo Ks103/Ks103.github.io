@@ -1,17 +1,18 @@
 import spaceman from '../assets/Images/spaceman.png';
 export const projects = [
-  {
+    {
     id: 1,
-    number: '01',
-    category: 'other',
-    categoryLabel: 'Project',
-    title: 'Litebite',
+    number: '09',
+    category: 'case-study',
+    categoryLabel: 'CASE STUDY',
+    title: 'WMS Dashboard Enhancement',
     description:
-      'A mobile app that helps users track meals and calories with AI-powered food recognition and personalized health insights.',
-    tags: ['Mobile App', 'AI', 'Health', 'UX Research'],
-    featured: 1,
-    template: 'short'
+      'A warehouse management platform enabling businesses to monitor inventory, warehouse utilization, pallet tracking, and temperature-sensitive storage operations in real time.',
+    tags: ['UX Audit', 'Dashboard', 'Enterprise SaaS', 'Logistics'],
+    featured: 9,
+    template: 'long'  
   },
+  
   {
     id: 2,
     number: '02',
@@ -98,14 +99,14 @@ export const projects = [
   },
   {
     id: 9,
-    number: '09',
-    category: 'case-study',
-    categoryLabel: 'CASE STUDY',
-    title: 'WMS Dashboard Enhancement',
+    number: '01',
+    category: 'other',
+    categoryLabel: 'Project',
+    title: 'Litebite',
     description:
-      'A warehouse management platform enabling businesses to monitor inventory, warehouse utilization, pallet tracking, and temperature-sensitive storage operations in real time.',
-    tags: ['UX Audit', 'Dashboard', 'Enterprise SaaS', 'Logistics'],
-    featured: 9,
-    template: 'long'  
+      'A mobile app that helps users track meals and calories with AI-powered food recognition and personalized health insights.',
+    tags: ['Mobile App', 'AI', 'Health', 'UX Research'],
+    featured: 1,
+    template: 'short'
   },
 ]
