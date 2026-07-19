@@ -222,7 +222,7 @@ export const projectDetails = {
         },
       ],
     },
-  }
+  },
   2: {
     template: 'long',
     hero: {
