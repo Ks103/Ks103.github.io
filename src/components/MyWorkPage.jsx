@@ -250,15 +250,15 @@ const MyWorkPage = () => {
   const filteredProjects = useMemo(() => {
     let result = [...projects]
 
-    if (activeTab !== 'all') {
-      result = result.filter(p => p.category === activeTab)
-    }
+    // if (activeTab !== 'all') {
+    //   result = result.filter(p => p.category === activeTab)
+    // }
 
-    if (sortOrder === 'featured') {
-      result.sort((a, b) => a.featured - b.featured)
-    } else {
-      result.sort((a, b) => a.title.localeCompare(b.title))
-    }
+    // if (sortOrder === 'featured') {
+    //   result.sort((a, b) => a.featured - b.featured)
+    // } else {
+    //   result.sort((a, b) => a.title.localeCompare(b.title))
+    // }
 
     return result
   }, [activeTab, sortOrder])

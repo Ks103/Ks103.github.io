@@ -2,7 +2,7 @@ import spaceman from '../assets/Images/spaceman.png';
 export const projects = [
     {
     id: 1,
-    number: '09',
+    number: '01',
     category: 'case-study',
     categoryLabel: 'CASE STUDY',
     title: 'WMS Dashboard Enhancement',
@@ -99,7 +99,7 @@ export const projects = [
   },
   {
     id: 9,
-    number: '01',
+    number: '09',
     category: 'other',
     categoryLabel: 'Project',
     title: 'Litebite',
