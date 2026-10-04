@@ -6,7 +6,6 @@ import { projects } from '../data/MyWorkData'
 
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
-import PowerButton from '../subComponents/PowerButton'
 import ParticleComponent from '../subComponents/ParticleComponent'
 import BigTitle from '../subComponents/BigTitlte'
 import WorkProjectCard from '../subComponents/WorkProjectCard'
@@ -19,9 +18,10 @@ const TABS = [
 
 const Box = styled.div`
   background-color: ${props => props.theme.body};
-  width: 100vw;
+  width: 100%;
   min-height: calc(var(--vh) * 100);
   position: relative;
+  overflow-x: hidden;
 `
 
 const Contact = styled.a`
@@ -32,6 +32,11 @@ const Contact = styled.a`
   text-decoration: none;
   z-index: 3;
   font-family: 'Karla', sans-serif;
+
+  @media (max-width: 768px) {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
 `
 
 const DesignLabel = styled.a`
@@ -54,20 +59,21 @@ const ProjectCount = styled.div`
   font-family: 'Karla', sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
-  `
-  
-  const PointerHolder = styled.div`
+`
+
+const PointerHolder = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+
   &::before {
-   content: '';
-   width: 10px;
-   height: 10px;
-   border-radius: 50%;
-   background-color: ${props => props.theme.text};
-   margin-top: 0.25rem;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: ${props => props.theme.text};
+    margin-top: 0.25rem;
   }
 `
 
@@ -75,280 +81,418 @@ const CountHolder = styled.div`
   font-size: 1rem;
   font-weight: 600;
   color: ${props => props.theme.text};
+
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+
   gap: 0.5rem;
 `
+
 const PageContent = styled.div`
   position: relative;
   z-index: 2;
-  padding: 7rem calc(2rem + 8vw) 4rem calc(2rem + 10vw);
-  max-width: 1200px;
+
+  width: 100%;
+  max-width: 1400px;
+
   margin: 0 auto;
+
+  padding: 7rem 7rem 4rem;
+
+  box-sizing: border-box;
+
+  @media (max-width: 1200px) {
+    padding: 7rem 5rem 4rem;
+  }
+
+  @media (max-width: 900px) {
+    padding: 6.5rem 3rem 3rem;
+  }
 
   @media (max-width: 768px) {
     padding: 6rem 1.5rem 3rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 5.5rem 1rem 2rem;
   }
 `
 
 const HeaderSection = styled.div`
   display: flex;
-  align-items: strech;
+  align-items: stretch;
   justify-content: space-between;
 `
+
 const HeaderLeft = styled.div`
   flex-grow: 2;
+  min-width: 0;
 `
+
 const HeaderRight = styled.div`
   flex-grow: 1;
+
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  margin: 0rem 2rem 0rem 0rem;
-`
-const SectionLabel = styled.span`
-  display: block;
-  font-family: 'Karla', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-  opacity: 0.7;
+
+  margin: 0 2rem 0 0;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `
 
 const PageTitle = styled.h1`
   font-family: 'Karla', sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 600;
-  line-height: 1.15;
-  margin-bottom: 1rem;
-  color: ${props => props.theme.text};
-`
 
-const Subheading = styled.p`
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  font-weight: 600;
+
+  line-height: 1.15;
+
+  margin: 0 0 1rem;
+
   color: ${props => props.theme.text};
-  opacity: 0.7;
-  max-width: 26rem;
-  margin-bottom: 2rem;
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `
 
 const FilterRow = styled.div`
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   flex-wrap: wrap;
+
   gap: 1rem;
+
   margin-bottom: 2.5rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
 `
 
 const TabGroup = styled.div`
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 0.6rem;
 `
 
 const Tab = styled.button`
   font-family: 'Karla', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
-  padding: 0.55rem 1.25rem;
-  border-radius: 50px;
-  border: 1.5px solid ${props => props.theme.text};
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
 
-  background-color: ${props => (props.$active ? props.theme.text : props.theme.body)};
-  color: ${props => (props.$active ? props.theme.body : props.theme.text)};
+  font-size: 0.85rem;
+
+  font-weight: 500;
+
+  padding: 0.55rem 1.25rem;
+
+  border-radius: 50px;
+
+  border: 1.5px solid ${props => props.theme.text};
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  background-color: ${props =>
+    props.$active ? props.theme.text : props.theme.body};
+
+  color: ${props =>
+    props.$active ? props.theme.body : props.theme.text};
 
   &:hover {
     background-color: ${props => props.theme.text};
+
     color: ${props => props.theme.body};
   }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+
+    padding: 0.5rem 1rem;
+  }
 `
 
-const SortWrapper = styled.div`
-  position: relative;
-  display: inline-block;
-
-  &::after {
-    content: "⌄";
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-55%);
-    pointer-events: none;
-    font-size: 1rem;
-    opacity: 0.7;
-  }
-`;
-
-const SortSelect = styled.select`
-  appearance: none;
-
-  padding: 0.8rem 2.5rem 0.8rem 1rem;
-
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.12);
-
-  background: rgba(255,255,255,0.04);
-  color: ${({ theme }) => theme.text};
-
-  font-weight: 600;
-  font-size: 0.85rem;
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: rgba(255,255,255,0.08);
-  }
-
-  &:focus {
-    outline: none;
-    border-color: ${({ theme }) => theme.accent || '#7c3aed'};
-  }
-`;
-
+/* =========================================
+   PROJECT GRID
+   ========================================= */
 
 const CardList = styled(motion.div)`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 1.5rem;
+
+  row-gap: 1.5rem;
+
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    gap: 1.25rem;
+  }
 `
 
-const ScrollHint = styled.div`
-  text-align: center;
-  padding: 3rem 0 1rem;
-  font-family: 'Karla', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.5;
-  color: ${props => props.theme.text};
+/* =========================================
+   CARD WRAPPER
+
+   IMPORTANT:
+   No fixed height.
+
+   The card height is determined by
+   its content.
+   ========================================= */
+
+const CardWrapper = styled.div`
+  width: 100%;
+
+  min-width: 0;
+
+  height: auto;
+
+  box-sizing: border-box;
+
+  cursor: ${props =>
+    props.$hasLink ? 'pointer' : 'default'};
+
+  /*
+    Do NOT force height here.
+    Let WorkProjectCard determine
+    the height naturally.
+  */
+
+  & > * {
+    width: 100% !important;
+
+    box-sizing: border-box;
+  }
 `
 
 const listVariants = {
-  hidden: { opacity: 0 },
+  hidden: {
+    opacity: 0,
+  },
+
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.1 },
+
+    transition: {
+      staggerChildren: 0.1,
+    },
   },
 }
 
 const MyWorkPage = () => {
-  const [activeTab, setActiveTab] = useState('all')
-  const [sortOrder, setSortOrder] = useState('featured')
+  const [activeTab, setActiveTab] =
+    useState('all')
+
+  const [sortOrder, setSortOrder] =
+    useState('featured')
 
   const filteredProjects = useMemo(() => {
     let result = [...projects]
 
-    // if (activeTab !== 'all') {
-    //   result = result.filter(p => p.category === activeTab)
-    // }
-
-    // if (sortOrder === 'featured') {
-    //   result.sort((a, b) => a.featured - b.featured)
-    // } else {
-    //   result.sort((a, b) => a.title.localeCompare(b.title))
-    // }
-
     return result
   }, [activeTab, sortOrder])
 
-  const countLabel = String(filteredProjects.length).padStart(2, '0')
+  const countLabel = String(
+    filteredProjects.length
+  ).padStart(2, '0')
+
+  /*
+    =========================================
+    PROJECT CLICK
+    =========================================
+  */
+
+  const handleProjectClick = (
+    event,
+    project
+  ) => {
+    if (!project.link) {
+      return
+    }
+
+    event.preventDefault()
+
+    event.stopPropagation()
+
+    window.open(
+      project.link,
+      '_blank',
+      'noopener,noreferrer'
+    )
+  }
 
   return (
     <ThemeProvider theme={lightTheme}>
       <Box>
+
+        {/* LOGO */}
+
         <LogoComponent theme="light" />
+
+        {/* SOCIAL ICONS */}
+
         <SocialIcons theme="light" />
-        {/* <PowerButton /> */}
+
+        {/* BACKGROUND */}
+
         <ParticleComponent theme="light" />
 
-        <Contact href="mailto:kkhushi3058@gmail.com" target="_blank" rel="noreferrer">
+        {/* CONTACT */}
+
+        <Contact
+          href="mailto:kkhushi3058@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <motion.h2
-            initial={{ y: -200 }}
-            animate={{ y: -2.5 }}
-            transition={{ type: 'spring', duration: 1.5, delay: 0.5 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            initial={{
+              y: -200,
+            }}
+            animate={{
+              y: -2.5,
+            }}
+            transition={{
+              type: 'spring',
+              duration: 1.5,
+              delay: 0.5,
+            }}
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
           >
             MSG ME..
           </motion.h2>
         </Contact>
 
-        {/* <DesignLabel
-          href="https://www.figma.com/@khushishroff"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <motion.h2
-            initial={{ y: -200 }}
-            animate={{ y: 10 }}
-            transition={{ type: 'spring', duration: 1.5, delay: 0.5 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Design Work
-          </motion.h2>
-        </DesignLabel> */}
+        {/* WORK */}
 
-        <BigTitle text="WORK" top="8%" right="20%" />
+        <BigTitle
+          text="WORK"
+          top="8%"
+          right="20%"
+        />
 
         <PageContent>
-            <HeaderSection>
-                <HeaderLeft>
-                    <PageTitle>Case Studies &amp; Projects</PageTitle>
-                    {/* <Subheading>
-                        A collection of selected projects where I led the design process from
-                        problem solving to final product.
-                    </Subheading> */}
-                </HeaderLeft>
-                
-            </HeaderSection>
-            <FilterRow>
-                <TabGroup>
-                {TABS.map(tab => (
-                    <Tab
-                    key={tab.id}
-                    $active={activeTab === tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    >
-                    {activeTab === tab.id ? ' ' : ''}
-                    {tab.label}
-                    </Tab>
-                ))}
-                </TabGroup>
-                
-                <HeaderRight>
-                    <ProjectCount>
-                        <PointerHolder></PointerHolder>
-                        <CountHolder>{countLabel} <span>Projects</span></CountHolder> 
-                    </ProjectCount>
-                </HeaderRight>  
-            </FilterRow>
 
-            <CardList
-                key={`${activeTab}-${sortOrder}`}
-                variants={listVariants}
-                initial="hidden"
-                animate="show"
-            >
-                {filteredProjects.map(project => (
-                <WorkProjectCard key={project.id} project={project} activeTab={activeTab} />
-                ))}
-            </CardList>
+          {/* HEADER */}
 
-            {/* <ScrollHint>↓ Scroll to Explore</ScrollHint> */}
+          <HeaderSection>
+
+            <HeaderLeft>
+
+              <PageTitle>
+                Case Studies &amp; Projects
+              </PageTitle>
+
+            </HeaderLeft>
+
+          </HeaderSection>
+
+          {/* FILTER */}
+
+          <FilterRow>
+
+            <TabGroup>
+
+              {TABS.map(tab => (
+                <Tab
+                  key={tab.id}
+                  $active={
+                    activeTab === tab.id
+                  }
+                  onClick={() =>
+                    setActiveTab(tab.id)
+                  }
+                >
+                  {tab.label}
+                </Tab>
+              ))}
+
+            </TabGroup>
+
+            <HeaderRight>
+
+              <ProjectCount>
+
+                <PointerHolder />
+
+                <CountHolder>
+                  {countLabel}
+
+                  <span>
+                    Projects
+                  </span>
+                </CountHolder>
+
+              </ProjectCount>
+
+            </HeaderRight>
+
+          </FilterRow>
+
+          {/* PROJECT CARDS */}
+
+          <CardList
+            key={`${activeTab}-${sortOrder}`}
+            variants={listVariants}
+            initial="hidden"
+            animate="show"
+          >
+
+            {filteredProjects.map(
+              project => (
+
+                <CardWrapper
+                  key={project.id}
+                  $hasLink={Boolean(
+                    project.link
+                  )}
+                  onClickCapture={event =>
+                    handleProjectClick(
+                      event,
+                      project
+                    )
+                  }
+                >
+
+                  <WorkProjectCard
+                    project={project}
+                    activeTab={activeTab}
+                  />
+
+                </CardWrapper>
+
+              )
+            )}
+
+          </CardList>
+
         </PageContent>
+
       </Box>
     </ThemeProvider>
   )

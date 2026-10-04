@@ -79,21 +79,27 @@ export const projectDetails = {
     template: 'long',
 
     hero: {
-      label: 'CASE STUDY',
-      brand: 'CELCIUS WMS',
-      logo: transporterlogo,
-      headline: 'Designing a Warehouse Control Center for Customer Excellence',
-      description:
-        'A warehouse management dashboard designed to help customers monitor inventory health, warehouse utilization, purchase orders, stock transfers, and compliance workflows from a single workspace.',
-      tags: [
-        'Warehouse Management',
-        'Dashboard Design',
-        'Enterprise SaaS',
-      ],
+  label: 'CASE STUDY',
+  brand: 'CELCIUS WMS',
 
-      image: mainsvg,
-    },
+  logo: transporterlogo,
 
+  headline: 'Designing a Warehouse Control Center for Customer Excellence',
+
+  description:
+    'A warehouse management dashboard designed to help customers monitor inventory health, warehouse utilization, purchase orders, stock transfers, and compliance workflows from a single workspace.',
+
+  tags: [
+    'Warehouse Management',
+    'Dashboard Design',
+    'Enterprise SaaS',
+  ],
+
+  ctaLabel: 'View Project',
+  ctaLink: 'https://www.figma.com/deck/qfKemNPOWH0mDcYe3yhgJW/WMS-Case-Study?node-id=0-1&t=oi5zusmh9EOGrFw2-1',
+
+  image: mainsvg,
+},
     overview: {
       headingImage: artus5,
 
